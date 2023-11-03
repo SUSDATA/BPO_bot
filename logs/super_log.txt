@@ -1,0 +1,7 @@
+11/03/2023 05:30:00 PM - root - cvarc - WARNING - Inicio de ejecucion del BOT para ITEMS DE FACTURACION 
+11/03/2023 05:30:00 PM - root - cvarc - WARNING - 5 registros en base fuente
+11/03/2023 05:30:00 PM - root - cvarc - WARNING - Extract Data Process finished
+11/03/2023 05:30:00 PM - root - cvarc - WARNING - -------------------------------
+11/03/2023 05:30:55 PM - root - cvarc - WARNING - Se ha procesado el incidente: 18492533
+11/03/2023 05:30:55 PM - root - cvarc - WARNING - -------------------------------
+11/03/2023 05:30:55 PM - root - cvarc - WARNING - Main Function finished naturally
