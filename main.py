@@ -1,9 +1,3 @@
-
-# VALIDATE CRM DASHBOARD IS IN FOCUS AND SEARCH FOR A NON IMAGE DETECTION SOLUTION
-# while crm_dashboard is None:
-#         crm_dashboard = pyautogui.locateOnScreen('crm_dashboard.png', grayscale = True,confidence=0.85)    
-#     print("CRM Dashboard GUI is present!")
-
 import pyautogui
 import asyncio
 import sys
@@ -43,26 +37,12 @@ async def main():
         FORMAT ='%(asctime)s - %(name)s - %(user)s - %(levelname)s - %(message)s'
         logging.basicConfig(filename=SUPER_LOG_FILENAME, filemode='w',format=FORMAT, datefmt='%m/%d/%Y %I:%M:%S %p',level=logging.WARNING)
         attrs = {'user': get_username_os()}
-
-        """To setup as many loggers as you want"""
-        # formatter = logging.Formatter('%(user)s - %(name)s - %(levelname)s - %(message)s')
-                
-        # handler = logging.FileHandler(INIT_LOG_FILENAME)        
-        # handler.setFormatter(formatter)
-
-        # init_logger = logging.getLogger('init log')
-        # init_logger.setLevel(logging.INFO)
-        # init_logger.addHandler(handler)
-        
-        # sleep(1)
-        # logging.warning('LOGGERS have been properly setup',extra=attrs) 
-        # logging.warning('Main Function started',extra=attrs) 
         
         #*******************************************#
         #*** SHOW MENU TO SELECT RPA ACTIVITY ******#
         #*******************************************#
         
-        print("----------------- RPA BPO v1.0 --------------------")                        
+        print("----------------- BOT BPO v1.0 --------------------")                        
         print("Introduzca el numero de la actividad que desea ejecutar")
         actividad_rpa = input("1. Actualizar Fechas\n2. Asignar Usuario\n3. Items de Facturación\n")
             
