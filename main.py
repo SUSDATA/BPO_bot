@@ -47,7 +47,7 @@ async def main():
         
         print("----------------- BOT BPO v1.0 --------------------")                        
         print("Introduzca el numero de la actividad que desea ejecutar")
-        actividad_rpa = input("1. Cambiar Fechas\n2. Cambiar Usuario\n3. Items de Facturación\n4. Actualizacion de Incidente (Caso Especial)\n")
+        actividad_rpa = input("1. Cambiar Fechas\n2. Cambiar Usuario\n3. Items de Facturación\n4. Cambio de Estado (Caso Especial)\n")
             
         if actividad_rpa == "1":
             actividad_rpa_selected = 'CAMBIO DE FECHAS'
@@ -59,7 +59,7 @@ async def main():
             actividad_rpa_selected = 'ITEMS DE FACTURACION'
 
         elif  actividad_rpa == "4":
-            actividad_rpa_selected = 'ACTUALIZAR INCIDENTE (CASO ESPECIAL)'
+            actividad_rpa_selected = 'CAMBIO DE ESTADO (CASO ESPECIAL)'
 
         else:
             print("Actividad no permitida!")            
