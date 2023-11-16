@@ -75,6 +75,9 @@ def list_all_active_windows():
         sleep(1)
         print(pyautogui.getActiveWindowTitle())
 
+def terminateProcess(ProcessName):
+    return os.system('taskkill /IM "' + ProcessName + '" /F')
+
 #***************************************#
 #************* SEND EMAIL  *************#
 #***************************************#

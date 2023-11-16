@@ -1,9 +1,10 @@
+import pyautogui
 import asyncio
 import sys
 import os
 import openpyxl # to handle input data through Excel
-from openapp import (openCRM,connectToCRM)
-from searchandupdateot import (searchAndUpdateDates,searchAndUpdateUser,searchAndUpdateBillingItem)
+from openapp import (openCRM,connectToCRM,resetCRM)
+from searchandupdateot import (searchAndUpdateDates,searchAndUpdateUser,searchAndUpdateBillingItem,searchAndUpdateIncident)
 from closeapps import (closeCRM)
 from genericfunctions import (showDesktop,make_noise,get_username_os,sendEmail,getCurrentDateAndTime)
 from telegramfunctions import (sendTelegramMsg,sendTelegramMsgWithDocuments)
@@ -12,6 +13,8 @@ import logging
 from time import sleep
 
 async def main():   
+    # while True:
+    #     print(pyautogui.position())    
 
     # CONSTANTS
     TELEGRAM_CHAT_ID = 5970685607 # PERSONAL CHAT WITH BOT 5970685607 # TELEGRAM CHAT GROUP ID #-1002019721248
@@ -25,6 +28,7 @@ async def main():
     # VARIABLES        
     total_rows = 0
     total_cols = 0
+    counter = 0
     resp_funcion = None
         
     try:
@@ -36,14 +40,14 @@ async def main():
         FORMAT ='%(asctime)s - %(name)s - %(user)s - %(levelname)s - %(message)s'
         logging.basicConfig(filename=SUPER_LOG_FILENAME, filemode='w',format=FORMAT, datefmt='%m/%d/%Y %I:%M:%S %p',level=logging.WARNING)
         attrs = {'user': get_username_os()}
-               
+
         #*******************************************#
         #*** SHOW MENU TO SELECT RPA ACTIVITY ******#
         #*******************************************#
         
         print("----------------- BOT BPO v1.0 --------------------")                        
         print("Introduzca el numero de la actividad que desea ejecutar")
-        actividad_rpa = input("1. Cambiar Fechas\n2. Cambiar Usuario\n3. Items de Facturación\n")
+        actividad_rpa = input("1. Cambiar Fechas\n2. Cambiar Usuario\n3. Items de Facturación\n4. Actualizacion de Incidente (Caso Especial)\n")
             
         if actividad_rpa == "1":
             actividad_rpa_selected = 'CAMBIO DE FECHAS'
@@ -53,6 +57,9 @@ async def main():
 
         elif  actividad_rpa == "3":
             actividad_rpa_selected = 'ITEMS DE FACTURACION'
+
+        elif  actividad_rpa == "4":
+            actividad_rpa_selected = 'ACTUALIZAR INCIDENTE (CASO ESPECIAL)'
 
         else:
             print("Actividad no permitida!")            
@@ -74,8 +81,8 @@ async def main():
             del wb['Input Backup']
         
         # Notify the start of RPA execution via Telegram        
-        #await sendTelegramMsg('START - RPA ' + actividad_rpa_selected + ' ha iniciado.\nUsuario ['+ get_username_os() +']\nTiempo de Inicio: ' + getCurrentDateAndTime(),TELEGRAM_CHAT_ID)
-        #await sendTelegramMsgWithDocuments(TELEGRAM_CHAT_ID)
+        await sendTelegramMsg('START - RPA ' + actividad_rpa_selected + ' ha iniciado.\nUsuario ['+ get_username_os() +']\nTiempo de Inicio: ' + getCurrentDateAndTime(),TELEGRAM_CHAT_ID)
+        await sendTelegramMsgWithDocuments(TELEGRAM_CHAT_ID)
         
         # # Notify the start of RPA execution via Email         
         # sendEmail(
@@ -106,7 +113,7 @@ async def main():
         
         #FortiClient
         # openAndConnectVPNForticlient()
-        # # #CRM
+        # CRM
         # sleep(1)
         # openCRM()
         # sleep(1)
@@ -121,14 +128,14 @@ async def main():
         rows = ws.iter_rows(min_row=2, max_row=total_rows, min_col=1, max_col=total_cols)    
         logging.warning('-------------------------------',extra=attrs)
         
-        for row in rows:
-            # se omiten aquellos registros que en la col STATUS tenga COMPLETADO o contenga la palabra ERROR
+        for row in rows:            
+            
+            # se omiten aquellos registros con STATUS  COMPLETADO o que contenga la palabra ERROR
             if row[1].value == 'COMPLETADO' or str(row[1].value).find("ERROR") != -1:
-                continue                
+                continue
 
-            #Interacting with the CRM Depending on the user input call the corresponding method            
-            if actividad_rpa.lower() == "1":   
-                print('Validando registro: ',str(row[0].value),row[3].value,row[4].value)
+            #Interacting with the CRM Depending on the user input calling the corresponding method            
+            if actividad_rpa.lower() == "1":                
                 resp_funcion = searchAndUpdateDates(str(row[0].value),row[3].value,row[4].value)
                 print("Respuesta de la función:",resp_funcion)
                 
@@ -138,7 +145,18 @@ async def main():
 
             if actividad_rpa.lower() == "3":
                 resp_funcion = searchAndUpdateBillingItem(str(row[0].value),str(row[8].value))  
-                print("Respuesta de la función:",resp_funcion)            
+                print("Respuesta de la función:",resp_funcion)
+
+            if actividad_rpa.lower() == "4":
+                print("counter: ",counter)
+                print('Validando registro: ',str(row[0].value))
+                resp_funcion = searchAndUpdateIncident(str(row[0].value))  
+                print("Respuesta de la función:",resp_funcion)                
+                counter =+ 1
+                if counter == 10:
+                    await sendTelegramMsg('se han logrado procesar 10 registros de la '+actividad_rpa_selected+'\n',TELEGRAM_CHAT_ID)
+                    counter = 0
+
             
             # Manejo de las posibles respuestas identificadas en los metodos de control
             if resp_funcion == 0:
@@ -151,7 +169,7 @@ async def main():
             else:                                
                 row[1].value = 'ERROR - '+ GENERIC_ERROR_MSG
                 logging.warning('No Se ha procesado el incidente: %s',row[0].value,extra=attrs)
-            wb.save(file) 
+            wb.save(file)             
                        
         print("Fin del Proceso Macro")    
         logging.warning('-------------------------------',extra=attrs)     
@@ -159,7 +177,7 @@ async def main():
     except FileNotFoundError as e:
         
         logging.warning('FileNotFoundError Occurred: %s',e,extra=attrs)
-        #await sendTelegramMsg('END - Error de Ejecución: Archivo Fuente No Encontrado - RPA ' + actividad_rpa_selected + '.',TELEGRAM_CHAT_ID)
+        await sendTelegramMsg('END - Error de Ejecución: Archivo Fuente No Encontrado - RPA ' + actividad_rpa_selected + '.',TELEGRAM_CHAT_ID)
         # sendEmail(
         #     'END - Error de Ejecución: FileNotFoundError - RPA ' + actividad_rpa_selected,
         #     CORREOS_DESTINO,
@@ -175,7 +193,7 @@ async def main():
         print(f"An error occurred: {e}")
         logging.warning('Error Occurred: %s',e,extra=attrs)
         logging.warning('Error Occurred v2: %s',sys.exc_info()[0],extra=attrs)        
-        #await sendTelegramMsg('END - Error de Ejecución: ' + str(e) + ' - RPA ' + actividad_rpa_selected + '.\n'+'Tipo de Error: '+str(sys.exc_info()[0]),TELEGRAM_CHAT_ID)
+        await sendTelegramMsg('END - Error de Ejecución: ' + str(e) + ' - RPA ' + actividad_rpa_selected + '.\n'+'Tipo de Error: '+str(sys.exc_info()[0]),TELEGRAM_CHAT_ID)
         # sendEmail(
         #     'END - Error de Ejecución: ' + e + ' - RPA ' + actividad_rpa_selected,
         #     CORREOS_DESTINO,
@@ -206,8 +224,8 @@ async def main():
         # Esto se ejecutara si el bloque try se ejecuta sin errores
         print("Try block succesfully executed")
         logging.warning('Main Function finished naturally',extra=attrs)
-        #await sendTelegramMsg('END - RPA '+actividad_rpa_selected+' ha finalizado.\n' + 'Usuario ['+ get_username_os() +']\nTiempo de finalización:'+ getCurrentDateAndTime(),TELEGRAM_CHAT_ID)
-        #await sendTelegramMsgWithDocuments(TELEGRAM_CHAT_ID)        
+        await sendTelegramMsg('END - RPA '+actividad_rpa_selected+' ha finalizado.\n' + 'Usuario ['+ get_username_os() +']\nTiempo de finalización:'+ getCurrentDateAndTime(),TELEGRAM_CHAT_ID)
+        await sendTelegramMsgWithDocuments(TELEGRAM_CHAT_ID)        
         # sendEmail(
         #     'END - RPA '+ actividad_rpa_selected +' ha finalizado',
         #     CORREOS_DESTINO,

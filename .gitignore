@@ -1,4 +1,6 @@
 __pycache__/
-
+assets/
+logs/
+batch file/
 # Ignora los archivos relacionados a API keys
 .env

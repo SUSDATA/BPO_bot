@@ -1,7 +1,60 @@
-11/03/2023 05:30:00 PM - root - cvarc - WARNING - Inicio de ejecucion del BOT para ITEMS DE FACTURACION 
-11/03/2023 05:30:00 PM - root - cvarc - WARNING - 5 registros en base fuente
-11/03/2023 05:30:00 PM - root - cvarc - WARNING - Extract Data Process finished
-11/03/2023 05:30:00 PM - root - cvarc - WARNING - -------------------------------
-11/03/2023 05:30:55 PM - root - cvarc - WARNING - Se ha procesado el incidente: 18492533
-11/03/2023 05:30:55 PM - root - cvarc - WARNING - -------------------------------
-11/03/2023 05:30:55 PM - root - cvarc - WARNING - Main Function finished naturally
+11/16/2023 01:24:27 PM - root - cvarc - WARNING - Inicio de ejecucion del BOT para ACTUALIZAR INCIDENTE (CASO ESPECIAL) 
+11/16/2023 01:24:30 PM - root - cvarc - WARNING - 111 registros en base fuente
+11/16/2023 01:24:30 PM - root - cvarc - WARNING - Extract Data Process finished
+11/16/2023 01:24:30 PM - root - cvarc - WARNING - -------------------------------
+11/16/2023 01:25:18 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19344044
+11/16/2023 01:25:50 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19345844
+11/16/2023 01:26:21 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19961128
+11/16/2023 01:26:53 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19963691
+11/16/2023 01:27:24 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19959735
+11/16/2023 01:27:56 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19343648
+11/16/2023 01:28:27 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19345277
+11/16/2023 01:28:59 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19960660
+11/16/2023 01:29:30 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19963201
+11/16/2023 01:30:01 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19959740
+11/16/2023 01:30:33 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19961140
+11/16/2023 01:31:04 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19344054
+11/16/2023 01:31:35 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19345858
+11/16/2023 01:32:07 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19963706
+11/16/2023 01:32:38 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19959760
+11/16/2023 01:33:09 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19344074
+11/16/2023 01:33:40 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19345879
+11/16/2023 01:34:12 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19963734
+11/16/2023 01:34:43 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19961161
+11/16/2023 01:35:14 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19959770
+11/16/2023 01:35:45 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19963753
+11/16/2023 01:36:16 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19344084
+11/16/2023 01:36:48 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19345889
+11/16/2023 01:37:19 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19961171
+11/16/2023 01:37:53 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19959775
+11/16/2023 01:38:25 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19344089
+11/16/2023 01:38:56 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19345895
+11/16/2023 01:39:27 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19961176
+11/16/2023 01:39:58 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19963762
+11/16/2023 01:40:30 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19959785
+11/16/2023 01:41:01 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19963775
+11/16/2023 01:41:32 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19344099
+11/16/2023 01:42:03 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19345906
+11/16/2023 01:42:34 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19961186
+11/16/2023 01:43:05 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19959801
+11/16/2023 01:43:36 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19344109
+11/16/2023 01:44:07 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19345916
+11/16/2023 01:44:39 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19961196
+11/16/2023 01:45:10 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19963793
+11/16/2023 01:45:41 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19959817
+11/16/2023 01:46:13 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19344124
+11/16/2023 01:46:45 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19961212
+11/16/2023 01:47:17 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19963813
+11/16/2023 01:47:48 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19345931
+11/16/2023 01:48:20 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19959827
+11/16/2023 01:48:51 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19344444
+11/16/2023 01:49:23 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19961596
+11/16/2023 01:49:54 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19345726
+11/16/2023 01:50:26 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19964662
+11/16/2023 01:50:57 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19959837
+11/16/2023 01:51:29 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19344134
+11/16/2023 01:52:00 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19345941
+11/16/2023 01:52:32 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19961223
+11/16/2023 01:53:03 PM - root - cvarc - WARNING - Se ha procesado el incidente: 19963825
+11/16/2023 01:53:03 PM - root - cvarc - WARNING - -------------------------------
+11/16/2023 01:53:03 PM - root - cvarc - WARNING - Main Function finished naturally

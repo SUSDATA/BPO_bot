@@ -1,6 +1,6 @@
 import subprocess
 import pyautogui
-from genericfunctions import (pressingKey,make_window_visible)
+from genericfunctions import (pressingKey,make_window_visible,terminateProcess)
 from time import sleep
 
 # Open VPN Client and Connect to NAE VPN
@@ -50,14 +50,24 @@ def connectToCRM():
     
     while crm_select_app is None:
         print("buscando ventana emergente!")
-        crm_select_app = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/select_app.png', grayscale = True,confidence=0.9)
+        crm_select_app = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/select_app_2.png', grayscale = True,confidence=0.9)
     print("CRM select box is present!")
     
     pressingKey('enter')
+    
     pressingKey('tab',4)
     pressingKey('enter')
     
     while crm_dashboard is None:
         crm_dashboard = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/crm_dashboard.png', grayscale = True,confidence=0.85)    
     print("CRM Dashboard GUI is present!")    
-    
+
+# Close CRM Onyx App if its open and reopen CRM    
+def resetCRM():
+    result = terminateProcess('CRM.exe')
+    if result == 0:
+        print(f"process killed successfully: CRM.exe")        
+    else:
+        print(f"Error occurred while killing process: CRM.exe | code:",result)        
+    openCRM()
+    connectToCRM()
