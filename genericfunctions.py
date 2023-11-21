@@ -13,6 +13,9 @@ def getCurrentDateAndTime():
     current_time = now.strftime("%H:%M:%S")
     return current_time    
 
+def formatDate(date):      
+    return date.strftime("%d/%m/%Y")
+
 def get_username_os():
    return os.getenv("USERNAME")
 
@@ -27,12 +30,14 @@ def showDesktop():
     pyautogui.keyUp('win')
     pyautogui.keyUp('d')
 
-def selectToEnd():    
-    pyautogui.keyDown('shift')
-    sleep(0.1)
-    pyautogui.press('end')              
-    sleep(0.1)
-    pyautogui.keyUp('shift')
+def selectToEnd(times):
+    for i in range(times):
+        pyautogui.keyDown('shift')
+        pyautogui.keyDown('fn')
+        pyautogui.keyDown('end')
+        pyautogui.keyUp('shift')
+        pyautogui.keyUp('fn')
+        pyautogui.keyUp('end')
         
 def make_noise():
     duration = 1000  # milliseconds
@@ -43,9 +48,9 @@ def make_noise():
 
 def make_window_visible(target_window):
     sleep(1)
-    count = 1
+    count = 0
     encontrado = None
-    cantVentanas = len(pyautogui.getAllWindows())    
+    print("Cantidad de ventanas activas: ",len(pyautogui.getAllWindows()))
     
     while encontrado is None:
         window_title = pyautogui.getActiveWindowTitle()
@@ -66,7 +71,6 @@ def winEnumHandler( hwnd, ctx ):
             print ( hex( hwnd ), win32gui.GetWindowText( hwnd ) )
     win32gui.EnumWindows( winEnumHandler, None )
     return 0
-
 #List all the active windows
 def list_all_active_windows():
     for x in pyautogui.getAllWindows():  

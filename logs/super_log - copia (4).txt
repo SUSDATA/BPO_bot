@@ -1,5 +1,0 @@
-10/30/2023 06:56:54 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para ACTUALIZACIÓN DE FECHAS 
-10/30/2023 06:56:56 PM - root - dgard - WARNING - 76 registros en base fuente
-10/30/2023 06:56:56 PM - root - dgard - WARNING - Extract Data Process finished
-10/30/2023 06:58:03 PM - root - dgard - WARNING - -------------------------------
-10/30/2023 06:58:32 PM - root - dgard - WARNING - No se identifica vista de detalles de OT reconocida en el CRM
