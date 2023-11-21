@@ -1,0 +1,57 @@
+11/20/2023 11:16:12 AM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE ESTADO 
+11/20/2023 11:16:12 AM - root - dgard - WARNING - 365 registros en base fuente
+11/20/2023 11:16:12 AM - root - dgard - WARNING - Extract Data Process Finished
+11/20/2023 11:16:12 AM - root - dgard - WARNING - -------------------------------
+11/20/2023 11:17:48 AM - root - dgard - WARNING - Se ha procesado el incidente: 19343961
+11/20/2023 11:19:26 AM - root - dgard - WARNING - Se ha procesado el incidente: 19345704
+11/20/2023 11:21:04 AM - root - dgard - WARNING - Se ha procesado el incidente: 19959689
+11/20/2023 11:22:40 AM - root - dgard - WARNING - Se ha procesado el incidente: 19344018
+11/20/2023 11:24:18 AM - root - dgard - WARNING - Se ha procesado el incidente: 19345815
+11/20/2023 11:25:54 AM - root - dgard - WARNING - Se ha procesado el incidente: 19963660
+11/20/2023 11:27:32 AM - root - dgard - WARNING - Se ha procesado el incidente: 19961102
+11/20/2023 11:29:10 AM - root - dgard - WARNING - Se ha procesado el incidente: 19959796
+11/20/2023 11:30:46 AM - root - dgard - WARNING - Se ha procesado el incidente: 19344104
+11/20/2023 11:32:24 AM - root - dgard - WARNING - Se ha procesado el incidente: 19345911
+11/20/2023 11:34:03 AM - root - dgard - WARNING - Se ha procesado el incidente: 19961191
+11/20/2023 11:35:41 AM - root - dgard - WARNING - Se ha procesado el incidente: 19963786
+11/20/2023 11:37:20 AM - root - dgard - WARNING - Se ha procesado el incidente: 19959847
+11/20/2023 11:38:58 AM - root - dgard - WARNING - Se ha procesado el incidente: 19344144
+11/20/2023 11:40:35 AM - root - dgard - WARNING - Se ha procesado el incidente: 19961233
+11/20/2023 11:42:13 AM - root - dgard - WARNING - Se ha procesado el incidente: 19963841
+11/20/2023 11:52:12 AM - root - dgard - WARNING - Se ha procesado el incidente: 19345952
+11/20/2023 11:53:52 AM - root - dgard - WARNING - Se ha procesado el incidente: 19344159
+11/20/2023 11:55:36 AM - root - dgard - WARNING - Se ha procesado el incidente: 19345967
+11/20/2023 11:57:13 AM - root - dgard - WARNING - Se ha procesado el incidente: 19961249
+11/20/2023 11:58:53 AM - root - dgard - WARNING - Se ha procesado el incidente: 19963865
+11/20/2023 12:00:30 PM - root - dgard - WARNING - Se ha procesado el incidente: 19959862
+11/20/2023 12:02:10 PM - root - dgard - WARNING - Se ha procesado el incidente: 19958370
+11/20/2023 12:03:48 PM - root - dgard - WARNING - Se ha procesado el incidente: 19344185
+11/20/2023 12:05:26 PM - root - dgard - WARNING - Se ha procesado el incidente: 19345993
+11/20/2023 12:07:06 PM - root - dgard - WARNING - Se ha procesado el incidente: 19961277
+11/20/2023 12:08:46 PM - root - dgard - WARNING - Se ha procesado el incidente: 19963918
+11/20/2023 12:10:26 PM - root - dgard - WARNING - Se ha procesado el incidente: 19958385
+11/20/2023 12:12:03 PM - root - dgard - WARNING - Se ha procesado el incidente: 19959936
+11/20/2023 12:13:40 PM - root - dgard - WARNING - Se ha procesado el incidente: 19342913
+11/20/2023 12:15:19 PM - root - dgard - WARNING - Se ha procesado el incidente: 19344526
+11/20/2023 12:16:58 PM - root - dgard - WARNING - Se ha procesado el incidente: 19961835
+11/20/2023 12:18:35 PM - root - dgard - WARNING - Se ha procesado el incidente: 19958395
+11/20/2023 12:20:15 PM - root - dgard - WARNING - Se ha procesado el incidente: 19959947
+11/20/2023 12:21:54 PM - root - dgard - WARNING - Se ha procesado el incidente: 19342923
+11/20/2023 12:23:31 PM - root - dgard - WARNING - Se ha procesado el incidente: 19344539
+11/20/2023 12:25:14 PM - root - dgard - WARNING - Se ha procesado el incidente: 19961845
+11/20/2023 12:29:59 PM - root - dgard - WARNING - Se ha procesado el incidente: 19958415
+11/20/2023 12:31:38 PM - root - dgard - WARNING - Se ha procesado el incidente: 19342938
+11/20/2023 12:33:16 PM - root - dgard - WARNING - Se ha procesado el incidente: 19344554
+11/20/2023 12:34:56 PM - root - dgard - WARNING - Se ha procesado el incidente: 19959962
+11/20/2023 12:36:36 PM - root - dgard - WARNING - Se ha procesado el incidente: 19961862
+11/20/2023 12:38:16 PM - root - dgard - WARNING - Se ha procesado el incidente: 19958485
+11/20/2023 12:39:53 PM - root - dgard - WARNING - Se ha procesado el incidente: 19960023
+11/20/2023 12:41:30 PM - root - dgard - WARNING - Se ha procesado el incidente: 19343002
+11/20/2023 12:43:22 PM - root - dgard - WARNING - Se ha procesado el incidente: 19344614
+11/20/2023 12:45:11 PM - root - dgard - WARNING - Se ha procesado el incidente: 19961930
+11/20/2023 12:46:54 PM - root - dgard - WARNING - Se ha procesado el incidente: 19958496
+11/20/2023 12:48:34 PM - root - dgard - WARNING - Se ha procesado el incidente: 19960033
+11/20/2023 12:50:11 PM - root - dgard - WARNING - Se ha procesado el incidente: 19961940
+11/20/2023 12:51:47 PM - root - dgard - WARNING - Se ha procesado el incidente: 19343012
+11/20/2023 12:53:27 PM - root - dgard - WARNING - Se ha procesado el incidente: 19344624
+11/20/2023 12:55:05 PM - root - dgard - WARNING - Se ha procesado el incidente: 19958536

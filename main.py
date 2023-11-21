@@ -1,37 +1,36 @@
-
-# VALIDATE CRM DASHBOARD IS IN FOCUS AND SEARCH FOR A NON IMAGE DETECTION SOLUTION
-# while crm_dashboard is None:
-#         crm_dashboard = pyautogui.locateOnScreen('crm_dashboard.png', grayscale = True,confidence=0.85)    
-#     print("CRM Dashboard GUI is present!")
-
 import pyautogui
+import shutil
 import asyncio
 import sys
 import os
 import openpyxl # to handle input data through Excel
-from openapp import (openCRM,connectToCRM,openAndConnectVPNForticlient)
-from searchandupdateot import (formatDate,searchAndUpdateDates,searchAndUpdateUser,searchAndUpdateBillingItem)
-from closeapps import (closeCRM,disconnectVPNForticlient,closeFortiClient)
-from genericfunctions import (showDesktop,make_noise,get_username_os,sendEmail,getCurrentDateAndTime)
+from openapp import (openCRM,connectToCRM)
+from searchandupdateot import (searchAndUpdateDates,searchAndUpdateUser,searchAndUpdateBillingItem,searchAndUpdateState)
+from closeapps import (closeCRM)
+from genericfunctions import (showDesktop,make_noise,get_username_os,sendEmail,getCurrentDateAndTime,terminateProcess)
 from telegramfunctions import (sendTelegramMsg,sendTelegramMsgWithDocuments)
 import logging
 #from logsfunctions import (setupLogger,setupLogger_2)
+from datetime import datetime
 from time import sleep
 
-async def main():
-            
+async def main():   
+    
+    # while True:
+    #     print(pyautogui.position())    
+    
     # CONSTANTS
     TELEGRAM_CHAT_ID = 5970685607 # PERSONAL CHAT WITH BOT 5970685607 # TELEGRAM CHAT GROUP ID #-1002019721248
     INPUT_DIRECTORY = 'C:/BOT INSUMO BASE'
     INPUT_FILENAME = 'Input BOT 001 V1.xlsx'
     SUPER_LOG_FILENAME = 'C:/BOT BPO Automation/Version 1.0/logs/super_log.txt'
-    #INIT_LOG_FILENAME = 'logs/init_log.txt'
+    GENERIC_ERROR_MSG = 'No Se ha procesado el incidente - Para ver mas detalles ver el archivo de logs'
     CORREOS_DESTINO = 'daniel.garcia@nae.global;danielgarcc@gmail.com;catherine.vargas@nae.global;hladb@nae.global;dbenv@nae.global'
     CORREOS_CC = 'drobinic.daniel@gmail.com'
 
     # VARIABLES        
     total_rows = 0
-    ot_completadas = []   
+    total_cols = 0
     resp_funcion = None
         
     try:
@@ -43,35 +42,27 @@ async def main():
         FORMAT ='%(asctime)s - %(name)s - %(user)s - %(levelname)s - %(message)s'
         logging.basicConfig(filename=SUPER_LOG_FILENAME, filemode='w',format=FORMAT, datefmt='%m/%d/%Y %I:%M:%S %p',level=logging.WARNING)
         attrs = {'user': get_username_os()}
-
-        """To setup as many loggers as you want"""
-        # formatter = logging.Formatter('%(user)s - %(name)s - %(levelname)s - %(message)s')
-                
-        # handler = logging.FileHandler(INIT_LOG_FILENAME)        
-        # handler.setFormatter(formatter)
-
-        # init_logger = logging.getLogger('init log')
-        # init_logger.setLevel(logging.INFO)
-        # init_logger.addHandler(handler)
-        
-        # sleep(1)
-        # logging.warning('LOGGERS have been properly setup',extra=attrs) 
-        # logging.warning('Main Function started',extra=attrs) 
-        
+               
         #*******************************************#
         #*** SHOW MENU TO SELECT RPA ACTIVITY ******#
         #*******************************************#
         
-        print("----------------- RPA BPO v1.0 --------------------")                        
+        print("----------------- BOT BPO v1.0 --------------------")                        
         print("Introduzca el numero de la actividad que desea ejecutar")
-        actividad_rpa = input("1. Actualizar Fechas\n2. Asignar Usuario\n3. Items de Facturación\n")
+        actividad_rpa = input("1. Cambiar Fechas\n2. Cambiar Usuario\n3. Items de Facturación\n4. Cambio de Estado\n")
             
         if actividad_rpa == "1":
-            actividad_rpa_selected = 'ACTUALIZACIÓN DE FECHAS'
+            actividad_rpa_selected = 'CAMBIO DE FECHAS'
             
         elif  actividad_rpa == "2":
-            actividad_rpa_selected = 'ASIGNACIÓN DE USUARIO'    
+            actividad_rpa_selected = 'CAMBIO DE USUARIO'    
+
+        elif  actividad_rpa == "3":
+            actividad_rpa_selected = 'ITEMS DE FACTURACION'
             
+        elif  actividad_rpa == "4":
+            actividad_rpa_selected = 'CAMBIO DE ESTADO'
+
         else:
             print("Actividad no permitida!")            
             print("Exit")
@@ -105,13 +96,15 @@ async def main():
         #     'null'            
         # )             
         
-        # Excel Input Base Manipulation         
+        # Excel Input Base Manipulation
         target_ws = wb.copy_worksheet(ws)
         target_ws.title = "Input Backup"
-        total_rows = len(ws['A'])
-        print("Total de registros en base fuente: ",total_rows-1)        
+        total_rows = len(ws['A'])        
+        total_cols = len(ws[1])
+        print("Total de registros en base fuente: ",total_rows-1)
+        print("Total de columnas en base fuente: ",total_cols)
         logging.warning('%s registros en base fuente',total_rows-1,extra=attrs)
-        logging.warning('Extract Data Process finished',extra=attrs)                     
+        logging.warning('Extract Data Process Finished',extra=attrs)
         
         # Validate if all elements are present 
         # in the GUI and all apps are initializated 
@@ -122,29 +115,28 @@ async def main():
         
         #FortiClient
         # openAndConnectVPNForticlient()
-        # # #CRM
-        sleep(1)
-        openCRM()
-        sleep(1)
-        connectToCRM()
-        logging.warning('Opening APPs Process finished has finished',extra=attrs)        
+        # CRM
+        # sleep(1)
+        # openCRM()
+        # sleep(1)
+        # connectToCRM()
+        # logging.warning('Opening APPs Process finished has finished',extra=attrs)        
         
         #*******************************************#
         #************* DATA PROCESSING *************#
-        #*******************************************#
-        #pyautogui.getWindowsWithTitle("Sistema Avanzado de Administración de Clientes [Versión 4.2.2.2]")[0].maximize()    
+        #*******************************************#        
         #Looping with iter_rows method through all the OTs (registers in the Excel)
         
-        rows = ws.iter_rows(min_row=2, max_row=total_rows, min_col=1, max_col=7)
-        # #for a,b,c,d,e,f,g in rows:
+        rows = ws.iter_rows(min_row=2, max_row=total_rows, min_col=1, max_col=total_cols)    
         logging.warning('-------------------------------',extra=attrs)
+        
         for row in rows:
             # se omiten aquellos registros que en la col STATUS tenga COMPLETADO o contenga la palabra ERROR
             if row[1].value == 'COMPLETADO' or str(row[1].value).find("ERROR") != -1:
-                continue                
+                continue
 
             #Interacting with the CRM Depending on the user input call the corresponding method            
-            if actividad_rpa.lower() == "1":
+            if actividad_rpa.lower() == "1":   
                 print('Validando registro: ',str(row[0].value),row[3].value,row[4].value)
                 resp_funcion = searchAndUpdateDates(str(row[0].value),row[3].value,row[4].value)
                 print("Respuesta de la función:",resp_funcion)
@@ -153,19 +145,30 @@ async def main():
                 resp_funcion = searchAndUpdateUser(str(row[0].value),str(row[6].value))  
                 print("Respuesta de la función:",resp_funcion)
 
-            #searchAndUpdateBillingItem()       
+            if actividad_rpa.lower() == "3":
+                resp_funcion = searchAndUpdateBillingItem(str(row[0].value),str(row[8].value))  
+                print("Respuesta de la función:",resp_funcion)     
+                
+            if actividad_rpa.lower() == "4":
+                resp_funcion = searchAndUpdateState(str(row[0].value),str(row[5].value),str(row[6].value),str(row[9].value))  
+                print("Respuesta de la función:",resp_funcion)            
             
             # Manejo de las posibles respuestas identificadas en los metodos de control
             if resp_funcion == 0:
-                ot_completadas = [str(row[0].value)]                
+                ot_completadas = [str(row[0].value)]
                 row[1].value = 'COMPLETADO'
                 logging.warning('Se ha procesado el incidente: %s',row[0].value,extra=attrs)
             elif resp_funcion == 10:
                 logging.warning('No se identifica vista de detalles de OT reconocida en el CRM',extra=attrs)
-                row[1].value = 'ERROR - No se identifica vista de detalles de OT reconocida en el CRM'
-            else:                                
-                row[1].value = 'ERROR - No Se ha procesado el incidente - Para ver mas detalles ver el archivo de logs'
-                logging.warning('No Se ha procesado el incidente: %s',row[0].value,extra=attrs)
+                row[1].value = 'ERROR - No se identifica vista de detalles de OT reconocida en el CRM'                
+            else:              
+                row[1].value = 'ERROR - '+ GENERIC_ERROR_MSG
+                logging.warning('No Se ha procesado el incidente: %s',row[0].value,extra=attrs)                
+                terminateProcess('CRM.exe')
+                print("Se ha terminado el proceso CRM.exe")
+                sleep(2)
+                openCRM()            
+                connectToCRM()
             wb.save(file) 
                        
         print("Fin del Proceso Macro")    
@@ -233,10 +236,9 @@ async def main():
         # )       
         exit_program()        
     finally:        
-        
+        shutil.copyfile('C:/BOT BPO Automation/Version 1.0/logs/super_log.txt', 'C:/BOT BPO Automation/Version 1.0/logs/old/super_log_'+ str(datetime.now()).translate(str.maketrans({':': '-', '.': '-'}))+ '.txt')
         sleep(1)
         make_noise() 
-
         
 def exit_program():
     sys.exit(0)    

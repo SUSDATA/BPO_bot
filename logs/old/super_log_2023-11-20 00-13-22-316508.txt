@@ -1,0 +1,11 @@
+11/19/2023 11:56:05 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE ESTADO 
+11/19/2023 11:56:05 PM - root - dgard - WARNING - 365 registros en base fuente
+11/19/2023 11:56:05 PM - root - dgard - WARNING - Extract Data Process Finished
+11/19/2023 11:56:05 PM - root - dgard - WARNING - -------------------------------
+11/20/2023 12:02:53 AM - root - dgard - WARNING - Se ha procesado el incidente: 19960028
+11/20/2023 12:04:38 AM - root - dgard - WARNING - Se ha procesado el incidente: 19961935
+11/20/2023 12:06:21 AM - root - dgard - WARNING - Se ha procesado el incidente: 19343007
+11/20/2023 12:08:03 AM - root - dgard - WARNING - Se ha procesado el incidente: 19344619
+11/20/2023 12:09:46 AM - root - dgard - WARNING - Se ha procesado el incidente: 19958521
+11/20/2023 12:11:31 AM - root - dgard - WARNING - Se ha procesado el incidente: 19960053
+11/20/2023 12:13:15 AM - root - dgard - WARNING - Se ha procesado el incidente: 19343032

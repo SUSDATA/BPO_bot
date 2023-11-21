@@ -1,0 +1,10 @@
+11/17/2023 09:01:24 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para ITEMS DE FACTURACION 
+11/17/2023 09:01:24 PM - root - dgard - WARNING - 2883 registros en base fuente
+11/17/2023 09:01:24 PM - root - dgard - WARNING - Extract Data Process Finished
+11/17/2023 09:01:24 PM - root - dgard - WARNING - -------------------------------
+11/17/2023 09:02:20 PM - root - dgard - WARNING - Se ha procesado el incidente: 18965091
+11/17/2023 09:03:02 PM - root - dgard - WARNING - Se ha procesado el incidente: 19110826
+11/17/2023 09:03:52 PM - root - dgard - WARNING - Se ha procesado el incidente: 20393499
+11/17/2023 09:04:38 PM - root - dgard - WARNING - Se ha procesado el incidente: 20393358
+11/17/2023 09:05:25 PM - root - dgard - WARNING - Se ha procesado el incidente: 20388410
+11/17/2023 09:06:13 PM - root - dgard - WARNING - No Se ha procesado el incidente: 20382638

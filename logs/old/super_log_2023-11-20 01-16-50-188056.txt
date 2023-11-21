@@ -1,0 +1,4 @@
+11/20/2023 01:12:40 AM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE ESTADO 
+11/20/2023 01:12:40 AM - root - dgard - WARNING - 365 registros en base fuente
+11/20/2023 01:12:40 AM - root - dgard - WARNING - Extract Data Process Finished
+11/20/2023 01:12:40 AM - root - dgard - WARNING - -------------------------------

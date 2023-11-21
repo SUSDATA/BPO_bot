@@ -1,0 +1,7 @@
+11/19/2023 04:35:10 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE ESTADO 
+11/19/2023 04:35:11 PM - root - dgard - WARNING - 2883 registros en base fuente
+11/19/2023 04:35:11 PM - root - dgard - WARNING - Extract Data Process Finished
+11/19/2023 04:35:11 PM - root - dgard - WARNING - -------------------------------
+11/19/2023 04:36:00 PM - root - dgard - WARNING - Se ha procesado el incidente: 18965091
+11/19/2023 04:36:00 PM - root - dgard - WARNING - Error Occurred: [Errno 13] Permission denied: 'C:/BOT INSUMO BASE\\Input BOT 001 V1.xlsx'
+11/19/2023 04:36:00 PM - root - dgard - WARNING - Error Occurred v2: <class 'PermissionError'>

@@ -1,0 +1,2 @@
+11/16/2023 06:40:35 PM - root - dgard - WARNING - Error Occurred: 
+11/16/2023 06:40:35 PM - root - dgard - WARNING - Error Occurred v2: <class 'EOFError'>

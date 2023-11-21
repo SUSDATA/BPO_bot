@@ -1,0 +1,7 @@
+11/17/2023 07:30:45 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para ITEMS DE FACTURACION 
+11/17/2023 07:30:46 PM - root - dgard - WARNING - 2883 registros en base fuente
+11/17/2023 07:30:46 PM - root - dgard - WARNING - Extract Data Process Finished
+11/17/2023 07:30:46 PM - root - dgard - WARNING - -------------------------------
+11/17/2023 07:31:22 PM - root - dgard - WARNING - Se ha procesado el incidente: 19110826
+11/17/2023 07:31:22 PM - root - dgard - WARNING - Error Occurred: [Errno 13] Permission denied: 'C:/BOT INSUMO BASE\\Input BOT 001 V1.xlsx'
+11/17/2023 07:31:22 PM - root - dgard - WARNING - Error Occurred v2: <class 'PermissionError'>

@@ -1,0 +1,6 @@
+11/19/2023 05:17:31 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE ESTADO 
+11/19/2023 05:17:31 PM - root - dgard - WARNING - 365 registros en base fuente
+11/19/2023 05:17:31 PM - root - dgard - WARNING - Extract Data Process Finished
+11/19/2023 05:17:31 PM - root - dgard - WARNING - -------------------------------
+11/19/2023 05:18:55 PM - root - dgard - WARNING - Error Occurred: Error code from Windows: 5 - Acceso denegado.
+11/19/2023 05:18:55 PM - root - dgard - WARNING - Error Occurred v2: <class 'pygetwindow.PyGetWindowException'>

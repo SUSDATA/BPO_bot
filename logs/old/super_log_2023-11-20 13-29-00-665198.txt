@@ -1,0 +1,8 @@
+11/20/2023 01:05:55 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE ESTADO 
+11/20/2023 01:05:55 PM - root - dgard - WARNING - 365 registros en base fuente
+11/20/2023 01:05:55 PM - root - dgard - WARNING - Extract Data Process Finished
+11/20/2023 01:05:55 PM - root - dgard - WARNING - -------------------------------
+11/20/2023 01:07:34 PM - root - dgard - WARNING - Se ha procesado el incidente: 19344215
+11/20/2023 01:09:22 PM - root - dgard - WARNING - Se ha procesado el incidente: 19346023
+11/20/2023 01:29:00 PM - root - dgard - WARNING - Error Occurred: list index out of range
+11/20/2023 01:29:00 PM - root - dgard - WARNING - Error Occurred v2: <class 'IndexError'>

@@ -1,0 +1,5 @@
+11/17/2023 07:27:29 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para ITEMS DE FACTURACION 
+11/17/2023 07:27:29 PM - root - dgard - WARNING - 2883 registros en base fuente
+11/17/2023 07:27:29 PM - root - dgard - WARNING - Extract Data Process Finished
+11/17/2023 07:27:29 PM - root - dgard - WARNING - -------------------------------
+11/17/2023 07:28:17 PM - root - dgard - WARNING - Se ha procesado el incidente: 18965091

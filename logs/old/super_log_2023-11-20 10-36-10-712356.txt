@@ -1,0 +1,5 @@
+11/20/2023 10:34:06 AM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE ESTADO 
+11/20/2023 10:34:06 AM - root - dgard - WARNING - 365 registros en base fuente
+11/20/2023 10:34:06 AM - root - dgard - WARNING - Extract Data Process Finished
+11/20/2023 10:34:06 AM - root - dgard - WARNING - -------------------------------
+11/20/2023 10:35:40 AM - root - dgard - WARNING - Se ha procesado el incidente: 19961044
