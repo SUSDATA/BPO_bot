@@ -1,0 +1,12 @@
+12/28/2023 11:11:45 AM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE FECHAS 
+12/28/2023 11:11:45 AM - root - dgard - WARNING - 467 registros en base fuente
+12/28/2023 11:11:45 AM - root - dgard - WARNING - Extract Data Process Finished
+12/28/2023 11:11:45 AM - root - dgard - WARNING - Opening APPs Process finished has finished
+12/28/2023 11:11:45 AM - root - dgard - WARNING - -------------------------------
+12/28/2023 11:11:47 AM - root - dgard - WARNING - Error Occurred: OpenCV(4.8.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\alloc.cpp:73: error: (-4:Insufficient memory) Failed to allocate 16612808 bytes in function 'cv::OutOfMemoryError'
+
+12/28/2023 11:11:47 AM - root - dgard - WARNING - Error Occurred v2 (e_type): <class 'cv2.error'>
+12/28/2023 11:11:47 AM - root - dgard - WARNING - Error Occurred v2 (e_object): OpenCV(4.8.0) D:\a\opencv-python\opencv-python\opencv\modules\core\src\alloc.cpp:73: error: (-4:Insufficient memory) Failed to allocate 16612808 bytes in function 'cv::OutOfMemoryError'
+
+12/28/2023 11:11:47 AM - root - dgard - WARNING - Error Occurred v2 (e_traceback): <traceback object at 0x000001FBB4FC3980>
+12/28/2023 11:11:47 AM - root - dgard - WARNING - Error Occurred v2 (e_line_number): 139

@@ -1,0 +1,10 @@
+12/28/2023 11:10:25 AM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE FECHAS 
+12/28/2023 11:10:25 AM - root - dgard - WARNING - 467 registros en base fuente
+12/28/2023 11:10:25 AM - root - dgard - WARNING - Extract Data Process Finished
+12/28/2023 11:10:25 AM - root - dgard - WARNING - Opening APPs Process finished has finished
+12/28/2023 11:10:25 AM - root - dgard - WARNING - -------------------------------
+12/28/2023 11:10:27 AM - root - dgard - WARNING - Error Occurred: Unable to allocate 5.93 MiB for an array with shape (1080, 1920, 3) and data type uint8
+12/28/2023 11:10:27 AM - root - dgard - WARNING - Error Occurred v2 (e_type): <class 'numpy.core._exceptions._ArrayMemoryError'>
+12/28/2023 11:10:27 AM - root - dgard - WARNING - Error Occurred v2 (e_object): Unable to allocate 5.93 MiB for an array with shape (1080, 1920, 3) and data type uint8
+12/28/2023 11:10:27 AM - root - dgard - WARNING - Error Occurred v2 (e_traceback): <traceback object at 0x000001F5650E3940>
+12/28/2023 11:10:27 AM - root - dgard - WARNING - Error Occurred v2 (e_line_number): 139

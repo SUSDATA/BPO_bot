@@ -3,63 +3,104 @@ from time import sleep
 from genericfunctions import (pressingKey,selectToEnd,formatDate)
 
 def searchAndUpdateUser(incidentId,ususarioAsignado):    
-    crm_dashboard = crm_assign_user = crm_edit_incident = crm_save_incident = crm_otp_saved_sucessfully = crm_warning_message = None
+    
+    crm_dashboard = crm_assign_user = crm_edit_incident = crm_save_incident = crm_otp_saved_sucessfully = crm_warning_message = crm_ot_blocked_message = None
     asignado_a = mod_consulta_popup = None 
-    crmAttempts = 0   
+    crmAttempts = 0
         
     #/////////////////////////////////// CRM DASHBOARD ///////////////////////////////////////////    
+    
     while crm_dashboard is None:
-        crm_dashboard = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/crm_dashboard.png', grayscale = True,confidence=0.85)            
+        crm_dashboard = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/crm_dashboard.png', grayscale = True,confidence=0.85)
         sleep(0.5)
         if crmAttempts == 5:
-            pyautogui.getWindowsWithTitle("Sistema Avanzado de Administración de Clientes [Versión 4.2.2.2]")[0].minimize()
-            pyautogui.getWindowsWithTitle("Sistema Avanzado de Administración de Clientes [Versión 4.2.2.2]")[0].maximize()
+            pyautogui.getWindowsWithTitle("Sistema Avanzado de Administración de Clientes [Versión 4.2.2.3]")[0].minimize()
+            pyautogui.getWindowsWithTitle("Sistema Avanzado de Administración de Clientes [Versión 4.2.2.3]")[0].maximize()
             print("Estoy dentro de los 5 intentos para ver el Dashboard del CRM")
             crmAttempts = 0
         crmAttempts = crmAttempts + 1
-        print(crmAttempts)
-        
-    print("CRM Dashboard GUI is present!")    
-    sleep(1)    
+                    
+    print("CRM Dashboard GUI is present!")   
+    pyautogui.click(pyautogui.center(crm_dashboard))
+    
+    #/////////////////////////////////// POP UP CONSULTA OT ///////////////////////////////////////////
+    
+    sleep(0.5)
     pressingKey('f2')
     while mod_consulta_popup is None:        
         mod_consulta_popup = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/mod_consulta_popup.png', grayscale = True,confidence=0.85)            
+        pressingKey('f2')
     print("mod_consulta_popup field is present and detected on GUI screen!")
+    sleep(0.5)
     pyautogui.write(incidentId)
-    sleep(1)
-    pressingKey('enter')    
+    sleep(0.5)
+    pressingKey('enter')
     
-    #/////////////////////////////////// EDIT VIEW CRM /////////////////////////////////////////// 
+    #/////////////////////////////////// FASE DE ADVERTENCIAS ///////////////////////////////////////////
     
-    # Validate edit_incident view is visible and on focus    
-    while crm_edit_incident is None:        
-        crm_edit_incident = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/edit_incident.png', grayscale = True,confidence=0.9)   
-    print("CRM Edit Incident button is present!")
-    crm_edit_incident_x,crm_edit_incident_y = pyautogui.center(crm_edit_incident)
-    pyautogui.click(crm_edit_incident_x, crm_edit_incident_y)
+    while crm_ot_blocked_message is None and crm_warning_message is None and crmAttempts < 10:
+        crm_warning_message = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/mensaje_advertencia.png', grayscale = True,confidence=0.9)   
+        crm_ot_blocked_message = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/crm_ot_blocked_message.png', grayscale = True,confidence=0.9)   
+        sleep(0.5)
+        if crmAttempts == 8:
+            print("Estoy dentro de los 8 intentos de medio seg para esperar algun pop up de OT bloqueada inesperado en el CRM")
+        crmAttempts += 1
+        print(crmAttempts)            
+            
+    if(crm_ot_blocked_message is None and crm_warning_message is None):
+        
+        print("No se encuentrarn ventanas de advertencia!")                                   
+        # Validate edit_incident view is visible and on focus
+        while crm_edit_incident is None:
+            crm_edit_incident = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/edit_incident.png', grayscale = True,confidence=0.9)   
+        print("Vista de Detalles OT is present!")    
+        print("CRM Edit Incident button is present!")
+        crm_edit_incident_x,crm_edit_incident_y = pyautogui.center(crm_edit_incident)
+        pyautogui.click(crm_edit_incident_x,crm_edit_incident_y)
     
-    # Validate assign user pop up is visible and on focus   
-    while crm_assign_user is None:        
-        crm_assign_user = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/asignar_ot_usuario_operador.png', grayscale = True,confidence=0.9)   
-    print("CRM Confirm Assign Pop Up is present!")        
-    sleep(1)
-    pressingKey('n') # No re asignar usuario al momento de editar las OTPs 
-    sleep(1)
+        # Validate assign user pop up is visible and on focus
+        # crm_assign_user = None  # reset variable   
+        crmAttempts = 0
+        while crm_assign_user is None and crmAttempts < 5:
+            crm_assign_user = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/asignar_ot_usuario_operador.png', grayscale = True,confidence=0.9)   
+            sleep(0.5)
+            print("buscando ventana de asignación de usuario")
+            crmAttempts +=1            
+        if crm_assign_user is not None:
+            print("CRM Confirm Assign Pop Up is present!")
+            sleep(1)
+            pressingKey('n') # No re asignar usuario al momento de editar las OTPs 
+            sleep(1)
     
-    # Maximize CRM Edit window 
+    else:        
+        pyautogui.click(pyautogui.center(crm_ot_blocked_message))
+        pressingKey('enter')
+        sleep(2)
+        pyautogui.hotkey('alt','f4')
+        return 9
+    
+    #/////////////////////////////////// MAXIMIZE WINDOW /////////////////////////////////////////// 
+    
     pyautogui.getWindowsWithTitle("Ordenes de Trabajo v8")[0].maximize()
-    sleep(1)
+    print("CRM Edit view Window was maximized!")
+    # Click on open Details Button on the CRM to make date fields visible    
+    pyautogui.click(24,617)
+    crmAttempts = 0
     
     #/////////////////////////////////// UPDATE USER ASSIGNED /////////////////////////////////////  
     # Identify which UI is present on screen. Then focus on USER ASSIGNATION FIELD and Paste the name 
     # of the user passed as parameters
             
     while asignado_a is None:        
-        asignado_a = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/asignado_a.png', grayscale = True,confidence=0.85)    
+        asignado_a = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/asignado_a.png', grayscale = True,confidence=0.85)
     print("asignado_a field is present and detected on GUI screen!")
-    pyautogui.click(x=301, y=263)
+    crm_asignado_a_x,crm_asignado_a_y = pyautogui.center(asignado_a)
+    pyautogui.moveTo(crm_asignado_a_x,crm_asignado_a_y)
+    pyautogui.moveRel(250,0)
+    pyautogui.click()
     pyautogui.write(ususarioAsignado)
     pressingKey('tab')
+    
     #/////////////////////////////////// CLOSING CRM EDIT/DETAILS VIEW ///////////////////////////////////////////    
     
     while crm_save_incident is None:
@@ -67,12 +108,12 @@ def searchAndUpdateUser(incidentId,ususarioAsignado):
     print("CRM Save Incident button is present!")
     crm_save_incident_x,crm_save_incident_y = pyautogui.center(crm_save_incident)
     pyautogui.click(crm_save_incident_x, crm_save_incident_y)
-    sleep(1)        
-    
+    sleep(1)
+        
     while crm_warning_message is None and crmAttempts < 10:        
         crm_warning_message = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/crm_warning_message.png', grayscale = True,confidence=0.9)   
         sleep(0.5)
-        if crmAttempts == 8:            
+        if crmAttempts == 8:
             print("Estoy dentro de los 8 intentos de medio seg para esperar algun pop up inesperado en el CRM")                        
         crmAttempts += 1
         print(crmAttempts)
@@ -103,15 +144,14 @@ def searchAndUpdateUser(incidentId,ususarioAsignado):
         sleep(1.5)
         return 0
     else:
-        sleep(1)
-        pressingKey('tab')
-        sleep(1)
-        pressingKey('enter')
         print("CRM empty_warning_message_crm pop up is present!")
+        pyautogui.click(pyautogui.center(crm_warning_message))
+        sleep(3)
+        pressingKey('enter')        
         
         # Validate assign user pop up is visible and on focus 
         crm_assign_user = None  # reset variable
-        while crm_assign_user is None:
+        while crm_assign_user is None:            
             crm_assign_user = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/asignar_ot_usuario_operador.png', grayscale = True,confidence=0.9)   
         print("CRM Confirm Assign Pop Up is present!")        
         sleep(1)
@@ -119,12 +159,15 @@ def searchAndUpdateUser(incidentId,ususarioAsignado):
         sleep(1)
         
         # Validate save OTP successfully  pop up is visible and on focus   
-        while crm_otp_saved_sucessfully is None:
+        while crm_otp_saved_sucessfully is None and crmAttempts < 10:
             crm_otp_saved_sucessfully = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/incidente_guardado_exitosamente.png', grayscale = True,confidence=0.9)   
-        print("CRM OTP Saved Succesfully Pop Up is present!")
-        sleep(1)
-        pressingKey('enter')
-        sleep(1)
+            sleep(0.5)
+            crmAttempts += 1
+        if(crm_otp_saved_sucessfully is not None):
+            print("CRM OTP Saved Succesfully Pop Up is present!")
+            sleep(1)
+            pressingKey('enter')
+            sleep(1)
 
         pyautogui.getWindowsWithTitle("Ordenes de Trabajo v8")[0].close()        
         sleep(1.5)
@@ -134,52 +177,57 @@ def searchAndUpdateUser(incidentId,ususarioAsignado):
         pressingKey('n') # No re asignar usuario al momento de editar las OTPs         
         print("n key has been pressed!")  
         return 0
-                        
+
 def searchAndUpdateDates(incidentId,fechaProgramacion,fechaCompromiso):
+    
     crm_dashboard = crm_assign_user = crm_edit_incident = crm_save_incident = crm_otp_saved_sucessfully = crm_warning_message = crm_ot_blocked_message = None     
-    vista_detalle_fecha_v1 = vista_detalle_fecha_v2 = vista_detalle_fecha_v3 = vista_detalle_fecha_v4 = vista_detalle_fecha_v5 = vista_detalle_fecha_v6 = mod_consulta_popup = None 
+    fecha_programacion_field = fecha_programacion_field_2 = fecha_compromiso_field  = fecha_compromiso_field_2 = vista_detalle_fecha_v1 = vista_detalle_fecha_v2 = vista_detalle_fecha_v3 = vista_detalle_fecha_v4 = vista_detalle_fecha_v5 = vista_detalle_fecha_v6 = mod_consulta_popup = None 
     crmAttempts = 0
     
     #/////////////////////////////////// CRM DASHBOARD ///////////////////////////////////////////    
+    
     while crm_dashboard is None:
         crm_dashboard = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/crm_dashboard.png', grayscale = True,confidence=0.85)
         sleep(0.5)
         if crmAttempts == 5:
-            pyautogui.getWindowsWithTitle("Sistema Avanzado de Administración de Clientes [Versión 4.2.2.2]")[0].minimize()
-            pyautogui.getWindowsWithTitle("Sistema Avanzado de Administración de Clientes [Versión 4.2.2.2]")[0].maximize()
+            pyautogui.getWindowsWithTitle("Sistema Avanzado de Administración de Clientes [Versión 4.2.2.3]")[0].minimize()
+            pyautogui.getWindowsWithTitle("Sistema Avanzado de Administración de Clientes [Versión 4.2.2.3]")[0].maximize()
             print("Estoy dentro de los 5 intentos para ver el Dashboard del CRM")
             crmAttempts = 0
         crmAttempts = crmAttempts + 1
-        print(crmAttempts)
-        
-    print("CRM Dashboard GUI is present!")    
-    sleep(1)
+                
+    print("CRM Dashboard GUI is present!")   
+    pyautogui.click(pyautogui.center(crm_dashboard))    
+    
+    sleep(0.5)
     pressingKey('f2')
-
     while mod_consulta_popup is None:        
         mod_consulta_popup = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/mod_consulta_popup.png', grayscale = True,confidence=0.85)            
         pressingKey('f2')
     print("mod_consulta_popup field is present and detected on GUI screen!")
     sleep(0.5)
     pyautogui.write(incidentId)
-    sleep(1)
+    sleep(0.5)
     pressingKey('enter')
     
-    while crm_ot_blocked_message is None and crm_warning_message is None and crmAttempts < 10:        
-        crm_warning_message = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/crm_process_message.png', grayscale = True,confidence=0.9)   
-        crm_ot_blocked_message = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/crm_ot_blocked_message.png', grayscale = True,confidence=0.9)   
+    #/////////////////////////////////// FASE DE ADVERTENCIAS ///////////////////////////////////////////
+    
+    while crm_ot_blocked_message is None and crm_warning_message is None and crmAttempts < 10:
+        crm_warning_message = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/mensaje_advertencia.png', grayscale = True,confidence=0.9)   
+        crm_ot_blocked_message = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/crm_ot_blocked_message_2.png', grayscale = True,confidence=0.9)   
         sleep(0.5)
-        if crmAttempts == 8:            
+        if crmAttempts == 8:
             print("Estoy dentro de los 8 intentos de medio seg para esperar algun pop up de OT bloqueada inesperado en el CRM")                        
         crmAttempts += 1
         print(crmAttempts)            
             
     if(crm_ot_blocked_message is None and crm_warning_message is None):
-        print("CRM crm_ot_blocked_message or crm_warning_message pop up are not present!")                   
+        print("No se encuentran ventanas de advertencia!")                           
         
         # Validate edit_incident view is visible and on focus            
         while crm_edit_incident is None:
             crm_edit_incident = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/edit_incident.png', grayscale = True,confidence=0.9)   
+        print("Vista de Detalles is present!")    
         print("CRM Edit Incident button is present!")
         crm_edit_incident_x,crm_edit_incident_y = pyautogui.center(crm_edit_incident)
         pyautogui.click(crm_edit_incident_x, crm_edit_incident_y)
@@ -197,117 +245,80 @@ def searchAndUpdateDates(incidentId,fechaProgramacion,fechaCompromiso):
             sleep(1)
             pressingKey('n') # No re asignar usuario al momento de editar las OTPs 
             sleep(1)
-           
+    
     else:
-        if crm_warning_message is None:
-            pressingKey('enter')
-        else:  
-            pressingKey('enter')
-            sleep(2)
-            pressingKey('enter')  
-
-        while crm_edit_incident is None:
-            crm_edit_incident = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/edit_incident.png', grayscale = True,confidence=0.9)   
-        print("CRM Edit Incident button is present!")
-        crm_edit_incident = None #reset variable
-        pyautogui.getWindowsWithTitle("Ordenes de Trabajo v8")[0].close()
-        return 1    
+        pressingKey('enter')
+        sleep(3)
+        pressingKey('enter')
+        sleep(1)
+        pyautogui.hotkey('alt','f4')
+        return 9
     
     # Maximize CRM window 
     pyautogui.getWindowsWithTitle("Ordenes de Trabajo v8")[0].maximize()
-    sleep(1)
     print("CRM Edit view Window was maximized!")    
-    #/////////////////////////////////// UPDATE DATES /////////////////////////////////////  
-    # Identify which UI is present on screen. Then focus on dates text input fields depending on the UI Variation and Paste the dates passed as parameters on the corresponding fields    
     # Click on open Details Button on the CRM to make date fields visible    
-    pyautogui.click(19,495)
-    sleep(1)
-    
+    pyautogui.click(24,617)
     crmAttempts = 0
-    while vista_detalle_fecha_v1 is None and vista_detalle_fecha_v2 is None and vista_detalle_fecha_v3 is None and vista_detalle_fecha_v4 is None and vista_detalle_fecha_v5 is None and vista_detalle_fecha_v6 is None:
-        vista_detalle_fecha_v1 = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/vista_detalles_fecha_V1.png', grayscale = True,confidence=0.9)
-        vista_detalle_fecha_v2 = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/vista_detalles_fecha_V2.png', grayscale = True,confidence=0.9)
-        vista_detalle_fecha_v3 = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/vista_detalles_fecha_V3.png', grayscale = True,confidence=0.9)
-        vista_detalle_fecha_v4 = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/vista_detalles_fecha_V4.png', grayscale = True,confidence=0.9)
-        vista_detalle_fecha_v5 = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/vista_detalles_fecha_V5.png', grayscale = True,confidence=0.9)
-        vista_detalle_fecha_v6 = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/vista_detalles_fecha_V6.png', grayscale = True,confidence=0.9)
-        if crmAttempts == 6:
-            crmAttempts = 0   
-            pyautogui.getWindowsWithTitle("Ordenes de Trabajo v8")[0].close()        
-            sleep(0.5) 
-            return 10 #returning special number for specific error scenario
-        sleep(0.5)
-        crmAttempts += 1
-        print(crmAttempts)
-
-
-        sleep(1)            
-    if vista_detalle_fecha_v1 != None:
-        print('vista_detalle_fecha_v1 detected on screen')        
-        pressingKey('tab',2)    
-        sleep(0.5)
-        selectToEnd()
-        pyautogui.write(formatDate(fechaCompromiso))
-        sleep(0.5)
-        pressingKey('tab',5)
-        sleep(0.5)
-        selectToEnd()
-        sleep(0.5)
-        pyautogui.write(formatDate(fechaCompromiso))
-        sleep(1)
-    elif vista_detalle_fecha_v2 != None:
-        print('vista_detalle_fecha_v2 detected on screen')
-        pressingKey('tab',4)    
-        sleep(0.5)
-        selectToEnd()
-        pyautogui.write(formatDate(fechaCompromiso))
-        sleep(0.5)
-        pressingKey('tab',12)
-        sleep(0.5)
-        selectToEnd()
-        sleep(0.5)
-        pyautogui.write(formatDate(fechaProgramacion))
-        sleep(1)
-    elif vista_detalle_fecha_v4 != None or vista_detalle_fecha_v5 != None:
-
-        print('vista_detalle_fecha_v4 or vista_detalle_fecha_v5 or vista_detalle_fecha_v6 detected on screen')
-        pressingKey('tab',1)
-        sleep(0.5)
-        selectToEnd()
-        pyautogui.write(formatDate(fechaCompromiso))
-        sleep(0.5)
-        pressingKey('tab',4)
-        sleep(0.5)
-        selectToEnd()
-        sleep(0.5)
-        pyautogui.write(formatDate(fechaProgramacion))
-        sleep(1)        
-    elif vista_detalle_fecha_v6 != None:
-        print('vista_detalle_fecha_v6 detected on screen')
-        pressingKey('tab',1)
-        sleep(0.5)
-        selectToEnd()
-        pyautogui.write(formatDate(fechaCompromiso))
-        sleep(0.5)
-        pressingKey('tab',4)
-        sleep(0.5)
-        selectToEnd()
-        sleep(0.5)
-        pyautogui.write(formatDate(fechaProgramacion))
-        sleep(1)        
-    elif vista_detalle_fecha_v3 != None:
-        print('vista_detalle_fecha_v3 detected on screen')
-        pressingKey('tab',1)    
-        sleep(0.5)
-        selectToEnd()
-        pyautogui.write(formatDate(fechaCompromiso))
-        sleep(0.5)
-        pressingKey('tab',3)
-        sleep(0.5)
-        selectToEnd()
-        sleep(0.5)
-        pyautogui.write(formatDate(fechaProgramacion))
-        sleep(1)
+    
+    #/////////////////////////////////// ACTUALIZACION DE FECHAS /////////////////////////////////////  
+    # move to specific area
+    
+    pyautogui.moveRel(250,0)
+    # CAMBIO DE FECHA DE PROGRAMACION                
+    while fecha_programacion_field is None and fecha_programacion_field_2 is None and crmAttempts < 250:
+        print("buscando fecha_programacion_field in screen")
+        print("crmAttempts: ",crmAttempts)
+        fecha_programacion_field = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/fecha_programacion_field.png', grayscale = True,confidence=0.95)        
+        fecha_programacion_field_2 = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/fecha_programacion_field_2.png', grayscale = True,confidence=0.95)                    
+        if crmAttempts % 5  == 0 and crmAttempts > 20:
+            pyautogui.scroll(-35)        
+        crmAttempts = crmAttempts + 1 
+    
+    if crmAttempts > 249:        
+        return 9
+            
+    if fecha_programacion_field_2 is None:        
+        pyautogui.moveTo(pyautogui.center(fecha_programacion_field))            
+        print("fecha_programacion_field 1 is present!")
+    else:
+        pyautogui.moveTo(pyautogui.center(fecha_programacion_field_2))  
+        print("fecha_programacion_field 2 is present!")
+        
+    pyautogui.click()    
+    pyautogui.moveRel(250,0)    
+    pyautogui.click()
+    pyautogui.hotkey('fn','end')  
+    pyautogui.hotkey('fn','shift','home')      
+    pyautogui.write(formatDate(fechaProgramacion))
+    pressingKey('enter')
+    
+    # ----- CAMBIO DE FECHA DE COMPROMISO ------
+    crmAttempts = 1
+    while fecha_compromiso_field is None and fecha_compromiso_field_2 is None and  crmAttempts < 300:
+        print("buscando fecha_compromiso_field in screen")
+        fecha_compromiso_field = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/fecha_compromiso_field.png', grayscale = True,confidence=0.95)        
+        fecha_compromiso_field_2 = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/fecha_compromiso_field_2.png', grayscale = True,confidence=0.95)                
+        
+        if crmAttempts % 5 == 0:
+            pyautogui.scroll(-35)            
+        crmAttempts = crmAttempts + 1                 
+    
+    if fecha_compromiso_field_2 is None:        
+        pyautogui.moveTo(pyautogui.center(fecha_compromiso_field))            
+        print("fecha_compromiso_field 1 is present!")
+    else:
+        pyautogui.moveTo(pyautogui.center(fecha_compromiso_field_2))  
+        print("fecha_compromiso_field 2 is present!")
+                            
+    pyautogui.click()
+    pyautogui.moveRel(250,0)
+    pyautogui.click()        
+    pyautogui.hotkey('fn','end')  
+    pyautogui.hotkey('fn','shift','home')          
+    pyautogui.write(formatDate(fechaCompromiso))    
+    pressingKey('enter')      
+    
     #/////////////////////////////////// CLOSING PHASE /////////////////////////////////////    
     
     while crm_save_incident is None:
@@ -316,15 +327,13 @@ def searchAndUpdateDates(incidentId,fechaProgramacion,fechaCompromiso):
     crm_save_incident_x,crm_save_incident_y = pyautogui.center(crm_save_incident)
     pyautogui.click(crm_save_incident_x, crm_save_incident_y)   
     
-    sleep(1)
-    crmAttempts = 0
-    while crm_warning_message is None and crmAttempts < 10:        
-        crm_warning_message = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/crm_process_message.png', grayscale = True,confidence=0.9)   
-        sleep(0.5)
-        if crmAttempts == 8:
-            print("Estoy dentro de los 8 intentos de medio seg para esperar algun pop up inesperado en el CRM")                        
-        crmAttempts += 1
-        print(crmAttempts)
+    sleep(1)    
+    crm_assign_user = None
+    while crm_warning_message is None and crm_assign_user is None:  
+        print("buscando o crm_warning_message o crm_assign_user")      
+        crm_warning_message = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/mensaje_advertencia.png', grayscale = True,confidence=0.9)   
+        crm_assign_user = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/asignar_ot_usuario_operador.png', grayscale = True,confidence=0.9)   
+        sleep(0.5)                
         
     if(crm_warning_message is None):
         print("CRM empty_warning_message_crm pop up is not present!")
@@ -335,8 +344,7 @@ def searchAndUpdateDates(incidentId,fechaProgramacion,fechaCompromiso):
         while crm_assign_user is None and crmAttempts < 5:
             crm_assign_user = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/asignar_ot_usuario_operador.png', grayscale = True,confidence=0.9)   
             sleep(0.5)
-            print("buscando ventana de asignación de usuario REVISADO")
-            print("CRM ASSIGN USER:",crm_assign_user)
+            print("buscando ventana de asignación de usuario")            
             crmAttempts +=1            
         if crm_assign_user is not None:
             print("CRM Confirm Assign Pop Up is present!")
@@ -344,7 +352,7 @@ def searchAndUpdateDates(incidentId,fechaProgramacion,fechaCompromiso):
             pressingKey('n') # No re asignar usuario al momento de editar las OTPs 
             sleep(1)
 
-         # Validate save OTP successfully  pop up is visible and on focus   
+        # Validate save OTP successfully  pop up is visible and on focus   
         while crm_otp_saved_sucessfully is None:
             crm_otp_saved_sucessfully = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/incidente_guardado_exitosamente.png', grayscale = True,confidence=0.9)   
         print("CRM OTP Saved Succesfully Pop Up is present!")
@@ -358,13 +366,18 @@ def searchAndUpdateDates(incidentId,fechaProgramacion,fechaCompromiso):
         sleep(1.5)
         return 0
     else:
-        sleep(1)
-        pressingKey('tab')
+        print("CRM empty_warning_message_crm pop up is present!")
+        #pyautogui.click(pyautogui.center(crm_warning_message))
         sleep(0.5)
-        pressingKey('tab')
+        pressingKey('enter')
         sleep(1)
         pressingKey('enter')
-        print("CRM empty_warning_message_crm pop up is present!")
+        sleep(1)
+        pyautogui.getWindowsWithTitle("Ordenes de Trabajo v8")[0].close()        
+        sleep(1)
+        pressingKey('n')        
+            
+        return 9
         
         # Validate assign user pop up is visible and on focus   
         crm_assign_user = None  # reset variable
@@ -386,10 +399,7 @@ def searchAndUpdateDates(incidentId,fechaProgramacion,fechaCompromiso):
         # You must Validate assign user pop up is visible and on focus
         sleep(1)
         pressingKey('n') # No re asignar usuario al momento de editar las OTPs         
-        print("n key has been pressed!")  
-      
-    sleep(1)  
-    return 1   
+        print("n key has been pressed!")         
 
 def searchAndUpdateBillingItem(incidentId,BillingItem):    
     crm_dashboard = crm_assign_user = crm_edit_incident = crm_save_incident = crm_otp_saved_sucessfully = crm_warning_message = mod_consulta_popup = None
@@ -408,44 +418,71 @@ def searchAndUpdateBillingItem(incidentId,BillingItem):
             print("Estoy dentro de los 5 intentos para ver el Dashboard del CRM")
             crmAttempts = 0
         crmAttempts = crmAttempts + 1
-        print(crmAttempts)
-        
-    print("CRM Dashboard GUI is present!")
-    pyautogui.click(pyautogui.center(crm_dashboard))   
-    sleep(1)
+                
+    print("CRM Dashboard GUI is present!")   
+    pyautogui.click(pyautogui.center(crm_dashboard))    
+    sleep(0.5)
     pressingKey('f2')
-    
+
     while mod_consulta_popup is None:        
         mod_consulta_popup = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/mod_consulta_popup.png', grayscale = True,confidence=0.85)            
         pressingKey('f2')
     print("mod_consulta_popup field is present and detected on GUI screen!")
     sleep(0.5)
     pyautogui.write(incidentId)
-    sleep(1)
+    sleep(0.5)
     pressingKey('enter')
     
-    #/////////////////////////////////// EDIT VIEW CRM /////////////////////////////////////////// 
+    # ---- FASE DE ADVERTENCIAS ----
+    while crm_ot_blocked_message is None and crm_warning_message is None and crmAttempts < 10:
+        crm_warning_message = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/mensaje_advertencia.png', grayscale = True,confidence=0.9)   
+        crm_ot_blocked_message = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/crm_ot_blocked_message.png', grayscale = True,confidence=0.9)   
+        sleep(0.5)
+        if crmAttempts == 8:
+            print("Estoy dentro de los 8 intentos de medio seg para esperar algun pop up de OT bloqueada inesperado en el CRM")                        
+        crmAttempts += 1
+        print(crmAttempts)            
+            
+    if(crm_ot_blocked_message is None and crm_warning_message is None):
+        print("No se encuentrarn ventanas de advertencia!")                           
+        
+        # Validate edit_incident view is visible and on focus            
+        while crm_edit_incident is None:
+            crm_edit_incident = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/edit_incident.png', grayscale = True,confidence=0.9)   
+        print("Vista de Detalles is present!")    
+        print("CRM Edit Incident button is present!")
+        crm_edit_incident_x,crm_edit_incident_y = pyautogui.center(crm_edit_incident)
+        pyautogui.click(crm_edit_incident_x, crm_edit_incident_y)
     
-    # Validate edit_incident view is visible and on focus    
-    while crm_edit_incident is None:
-        crm_edit_incident = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/edit_incident.png', grayscale = True,confidence=0.9)   
-    print("CRM Edit Incident button is present!")
-    crm_edit_incident_x,crm_edit_incident_y = pyautogui.center(crm_edit_incident)
-    pyautogui.click(crm_edit_incident_x, crm_edit_incident_y)
-
-    # Validate assign user pop up is visible and on focus   
-    while crm_assign_user is None:
-        crm_assign_user = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/asignar_ot_usuario_operador.png', grayscale = True,confidence=0.9)   
-    print("CRM Confirm Assign Pop Up is present!")        
-    sleep(1)
-    pressingKey('n') # No re asignar usuario al momento de editar las OTPs 
-    sleep(1)
+        # Validate assign user pop up is visible and on focus
+        # crm_assign_user = None  # reset variable   
+        crmAttempts = 0
+        while crm_assign_user is None and crmAttempts < 5:
+            crm_assign_user = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/asignar_ot_usuario_operador.png', grayscale = True,confidence=0.9)   
+            sleep(0.5)
+            print("buscando ventana de asignación de usuario")
+            crmAttempts +=1            
+        if crm_assign_user is not None:
+            print("CRM Confirm Assign Pop Up is present!")
+            sleep(1)
+            pressingKey('n') # No re asignar usuario al momento de editar las OTPs 
+            sleep(1)
     
-    # Maximize CRM Edit window 
+    # ------- ACCIONES FASE DE ADVERTENCIA --------
+    else:
+        pressingKey('enter')
+        sleep(3)
+        pressingKey('enter')
+        sleep(1)
+        pyautogui.hotkey('alt','f4')
+        return 9
+    
+    # Maximize CRM window 
     pyautogui.getWindowsWithTitle("Ordenes de Trabajo v8")[0].maximize()
-    sleep(1)
-    pyautogui.click(24,619)
-    sleep(1)
+    print("CRM Edit view Window was maximized!")    
+    # Click on open Details Button on the CRM to make date fields visible    
+    pyautogui.click(24,617)
+    crmAttempts = 0
 
     #/////////////////////////////////// UPDATE BILLING ITEM  /////////////////////////////////////  
     # Identify which UI is present on screen. Then focus on BILLING ITEM FIELD and select the incoming billing item 
@@ -575,11 +612,12 @@ def searchAndUpdateBillingItem(incidentId,BillingItem):
 
 def searchAndUpdateState(incidentId,estado,usuario,cod_resolucion_1):
     
-    crm_dashboard = crm_assign_user = crm_edit_incident = crm_save_incident = crm_otp_saved_sucessfully = crm_warning_message = mod_consulta_popup = None
+    crm_dashboard = crm_assign_user = crm_edit_incident = crm_save_incident = crm_otp_saved_sucessfully = crm_warning_message = mod_consulta_popup = crm_ot_blocked_message = None
     estado_field = usuario_asignado  = cod_resolucion_1_field = crm_correo_enviado = None
     crmAttempts = 0
     estados = estado.split(",", 2) # se divide la cadena de texto con los estados a gestionar
     usuarios = usuario.split(",", 2) # se divide la cadena de texto con los usuarios que deben ser asignados
+    print(estados,usuarios)
     
     #/////////////////////////////////// CRM DASHBOARD ///////////////////////////////////////////    
     while crm_dashboard is None:
@@ -591,49 +629,80 @@ def searchAndUpdateState(incidentId,estado,usuario,cod_resolucion_1):
             print("Estoy dentro de los 5 intentos para ver el Dashboard del CRM")
             crmAttempts = 0
         crmAttempts = crmAttempts + 1
-        print(crmAttempts)
-    print("CRM Dashboard GUI is present!")    
-    
-    pyautogui.click(pyautogui.center(crm_dashboard))   
-    sleep(1)
+
+    print("CRM Dashboard GUI is present!")
+    pyautogui.click(pyautogui.center(crm_dashboard))    
+    sleep(0.5)
     pressingKey('f2')
-    
-    while mod_consulta_popup is None:
+
+    while mod_consulta_popup is None:        
         mod_consulta_popup = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/mod_consulta_popup.png', grayscale = True,confidence=0.85)            
         pressingKey('f2')
     print("mod_consulta_popup field is present and detected on GUI screen!")
     sleep(0.5)
     pyautogui.write(incidentId)
-    sleep(1)
+    sleep(0.5)
     pressingKey('enter')
     
-    #/////////////////////////////////// EDIT VIEW CRM /////////////////////////////////////////// 
+    # ---- FASE DE ADVERTENCIAS ----
+    while crm_ot_blocked_message is None and crm_warning_message is None and crmAttempts < 10:
+        crm_warning_message = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/mensaje_advertencia.png', grayscale = True,confidence=0.9)   
+        crm_ot_blocked_message = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/crm_ot_blocked_message.png', grayscale = True,confidence=0.9)   
+        sleep(0.5)
+        if crmAttempts == 8:
+            print("Estoy dentro de los 8 intentos de medio seg para esperar algun pop up de OT bloqueada inesperado en el CRM")                        
+        crmAttempts += 1
+        print(crmAttempts)  
+            
+    if(crm_ot_blocked_message is None and crm_warning_message is None):
+        print("No se encuentrarn ventanas de advertencia!")                           
+        
+        # Validate edit_incident view is visible and on focus            
+        while crm_edit_incident is None:
+            crm_edit_incident = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/edit_incident.png', grayscale = True,confidence=0.9)   
+        print("Vista de Detalles is present!")    
+        print("CRM Edit Incident button is present!")
+        crm_edit_incident_x,crm_edit_incident_y = pyautogui.center(crm_edit_incident)
+        pyautogui.click(crm_edit_incident_x, crm_edit_incident_y)
     
-    # Validate edit_incident view is visible and on focus    
-    while crm_edit_incident is None:
-        crm_edit_incident = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/edit_incident.png', grayscale = True,confidence=0.9)   
-    print("CRM Edit Incident button is present!")
-    crm_edit_incident_x,crm_edit_incident_y = pyautogui.center(crm_edit_incident)
-    pyautogui.click(crm_edit_incident_x, crm_edit_incident_y)
-
-    # Validate assign user pop up is visible and on focus   
-    while crm_assign_user is None:
-        crm_assign_user = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/asignar_ot_usuario_operador.png', grayscale = True,confidence=0.9)   
-    print("CRM Confirm Assign Pop Up is present!")        
-    sleep(0.5)
-    pressingKey('n') # No re asignar usuario al momento de editar las OTPs     
+        # Validate assign user pop up is visible and on focus
+        # crm_assign_user = None  # reset variable   
+        crmAttempts = 0
+        while crm_assign_user is None and crmAttempts < 5:
+            crm_assign_user = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/asignar_ot_usuario_operador.png', grayscale = True,confidence=0.9)   
+            sleep(0.5)
+            print("buscando ventana de asignación de usuario")
+            crmAttempts +=1            
+        if crm_assign_user is not None:
+            print("CRM Confirm Assign Pop Up is present!")
+            sleep(1)
+            pressingKey('n') # No re asignar usuario al momento de editar las OTPs 
+            sleep(1)
     
-    # Maximize CRM Edit window 
+    # ------- ACCIONES FASE DE ADVERTENCIA --------
+    else:
+        pressingKey('enter')
+        sleep(3)
+        pressingKey('enter')
+        sleep(1)
+        pyautogui.hotkey('alt','f4')
+        return 9
+    
+    # Maximize CRM window 
     pyautogui.getWindowsWithTitle("Ordenes de Trabajo v8")[0].maximize()
-    sleep(1)
+    print("CRM Edit view Window was maximized!")
+    # Click on open Details Button on the CRM to make date fields visible    
+    pyautogui.click(24,617)
+    crmAttempts = 0
     
     #/////////////////////////////////// CAMBIO DE ESTADO FLUJO #1 UPDATE STATE  /////////////////////////////////////
     
+    # ------------ 1ER CICLO ------------#
     # CAMBIO DE ESTADO
     while estado_field is None:
         print("buscando estado_field in screen")
         estado_field = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/estado_field.png', grayscale = True,confidence=0.95)        
-    print("estado_field is present!")            
+    print("estado_field is present!")
     
     estado_field_x,estado_field_y = pyautogui.center(estado_field)    
     pyautogui.moveTo(estado_field_x,estado_field_y)
@@ -670,7 +739,7 @@ def searchAndUpdateState(incidentId,estado,usuario,cod_resolucion_1):
     pyautogui.keyDown('enter')
     sleep(1)    
     pyautogui.write(cod_resolucion_1)
-    pressingKey('enter')    
+    pressingKey('enter')
   
     while crm_save_incident is None:
         print("buscando crm_save_incident in screen")
@@ -718,11 +787,9 @@ def searchAndUpdateState(incidentId,estado,usuario,cod_resolucion_1):
         sleep(1)
                 
         # ------------ 2ND CYCLE -------------------#
-
-        if(len(estados) > 1 and len(usuarios) > 1 and len(estados) == len(usuarios)):
-            
-            # ---- CAMBIO DE ESTADO 2 ND ATTEMPT --------        
-
+        # MAKE IT DINAMYC VALIDATION IF NECESSARY
+        # ---- CAMBIO DE ESTADO --------        
+        if len(estados) > 1:
             while estado_field is None:
                 print("buscando estado_field 2do intento in screen")
                 estado_field = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/estado_field.png', grayscale = True,confidence=0.95)        
@@ -735,7 +802,7 @@ def searchAndUpdateState(incidentId,estado,usuario,cod_resolucion_1):
             pyautogui.write(estados[1])
             pressingKey('enter')
 
-            # CAMBIO DE USUARIO 2 ND ATTEMPT
+            # CAMBIO DE USUARIO
             while usuario_asignado is None:
                 print("buscando usuario_asignado in screen")
                 usuario_asignado = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/usuario_asignado.png', grayscale = True,confidence=0.95)
@@ -749,6 +816,91 @@ def searchAndUpdateState(incidentId,estado,usuario,cod_resolucion_1):
             pyautogui.write(usuarios[1])        
             pressingKey('enter')
 
+            while crm_save_incident is None:
+                print("buscando crm_save_incident in screen")
+                crm_save_incident = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/guardar_incidente_button.png', grayscale = True,confidence=0.9)   
+            print("CRM Save Incident button is present!")
+            crm_save_incident_x,crm_save_incident_y = pyautogui.center(crm_save_incident)
+            pyautogui.click(crm_save_incident_x, crm_save_incident_y)   
+            
+            sleep(1)
+            crmAttempts = 0
+            while crm_warning_message is None and crmAttempts < 10:        
+                crm_warning_message = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/crm_process_message.png', grayscale = True,confidence=0.9)   
+                sleep(0.5)
+                if crmAttempts == 8:
+                    print("Estoy dentro de los 8 intentos de medio seg para esperar algun pop up inesperado en el CRM")                        
+                crmAttempts += 1
+                print(crmAttempts)
+                
+            if(crm_warning_message is None):
+                
+                print("CRM empty_warning_message_crm pop up is not present!")
+                
+                if len(estados) == 2:
+                    crmAttempts = 0                    
+                    while crm_correo_enviado is None  and crmAttempts < 90:
+                        print("buscando crm_correo_enviado en pantalla. intento # ",crmAttempts)
+                        sleep(1)
+                        crm_correo_enviado = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/correo_enviado_cambio_estado.png', grayscale = True,confidence=0.9)
+                        crmAttempts += 1
+                    sleep(0.15)
+                    if crmAttempts > 88:
+                        return 9
+                    pyautogui.click(pyautogui.center(crm_correo_enviado))
+                    pressingKey('tab')
+                    pressingKey('enter')
+                
+                # Validate assign user pop up is visible and on focus   
+                crm_assign_user = None  # reset variable            
+                while crm_assign_user is None:
+                    crm_assign_user = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/asignar_ot_usuario_operador.png', grayscale = True,confidence=0.9)   
+                    sleep(0.5)
+                    print("buscando ventana de asignación de usuario REVISADO")                                
+                print("CRM Confirm Assign Pop Up is present!")
+                sleep(0.5)
+                pressingKey('n') # No re asignar usuario al momento de editar las OTPs 
+                sleep(1)
+
+                # Validate save OTP successfully  pop up is visible and on focus   
+                while crm_otp_saved_sucessfully is None:
+                    print("buscando crm_otp_saved_sucessfully en pantalla")
+                    crm_otp_saved_sucessfully = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/incidente_guardado_exitosamente.png', grayscale = True,confidence=0.9)   
+                print("CRM OTP Saved Succesfully Pop Up is present!")
+                sleep(1)
+                pressingKey('enter')
+                sleep(1)     
+
+        # ------------ 3ER CICLO -------------------#
+        # MAKE IT DINAMYC VALIDATION IF NECESSARY
+        # ---- CAMBIO DE ESTADO --------      
+        if len(estados) > 2:
+            while estado_field is None:
+                print("buscando estado_field 2do intento in screen")
+                estado_field = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/estado_field.png', grayscale = True,confidence=0.95)        
+            print("estado_field is present!")            
+            
+            estado_field_x,estado_field_y = pyautogui.center(estado_field)    
+            pyautogui.moveTo(estado_field_x,estado_field_y)
+            pyautogui.moveRel(265,0)
+            pyautogui.click()
+            pyautogui.write(estados[2])
+            pressingKey('enter')
+
+            # CAMBIO DE USUARIO
+            while usuario_asignado is None:
+                print("buscando usuario_asignado in screen")
+                usuario_asignado = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/usuario_asignado.png', grayscale = True,confidence=0.95)
+            print("usuario_asignado 2do intento is present!")            
+                
+            usuario_asignado_x,usuario_asignado_y = pyautogui.center(usuario_asignado)
+            pyautogui.moveTo(usuario_asignado_x,usuario_asignado_y)
+            pyautogui.moveRel(265,0)     
+            pyautogui.click()
+            sleep(0.7)
+            pyautogui.write(usuarios[1])        
+            pressingKey('enter')
+            
             while crm_save_incident is None:
                 print("buscando crm_save_incident in screen")
                 crm_save_incident = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/guardar_incidente_button.png', grayscale = True,confidence=0.9)   
@@ -801,11 +953,13 @@ def searchAndUpdateState(incidentId,estado,usuario,cod_resolucion_1):
                 sleep(1)
                 pressingKey('enter')
                 sleep(1)     
-
+                
         # Close Edit Incident View 
         pyautogui.getWindowsWithTitle("Ordenes de Trabajo v8")[0].close()        
         sleep(1.5)
-        return 0               
+        return 0
+    
+    
     else:
         sleep(1)
         pressingKey('tab')

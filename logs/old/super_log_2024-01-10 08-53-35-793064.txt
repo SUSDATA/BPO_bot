@@ -1,0 +1,12 @@
+01/10/2024 08:47:47 AM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE USUARIO 
+01/10/2024 08:47:47 AM - root - dgard - WARNING - 2536 registros en base fuente
+01/10/2024 08:47:47 AM - root - dgard - WARNING - Extract Data Process Finished
+01/10/2024 08:47:47 AM - root - dgard - WARNING - Opening APPs Process finished has finished
+01/10/2024 08:47:47 AM - root - dgard - WARNING - -------------------------------
+01/10/2024 08:48:27 AM - root - dgard - WARNING - Se ha procesado el incidente: 19870173
+01/10/2024 08:49:00 AM - root - dgard - WARNING - Se ha procesado el incidente: 19088269
+01/10/2024 08:49:33 AM - root - dgard - WARNING - Se ha procesado el incidente: 18458405
+01/10/2024 08:50:08 AM - root - dgard - WARNING - Se ha procesado el incidente: 18443718
+01/10/2024 08:50:41 AM - root - dgard - WARNING - Se ha procesado el incidente: 19528115
+01/10/2024 08:51:14 AM - root - dgard - WARNING - Se ha procesado el incidente: 20085286
+01/10/2024 08:51:48 AM - root - dgard - WARNING - Se ha procesado el incidente: 20085324

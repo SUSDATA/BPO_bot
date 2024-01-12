@@ -1,0 +1,5 @@
+12/04/2023 06:28:13 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE FECHAS 
+12/04/2023 06:28:13 PM - root - dgard - WARNING - 530 registros en base fuente
+12/04/2023 06:28:13 PM - root - dgard - WARNING - Extract Data Process Finished
+12/04/2023 06:28:13 PM - root - dgard - WARNING - -------------------------------
+12/04/2023 06:28:48 PM - root - dgard - WARNING - Se ha procesado el incidente: 19314828

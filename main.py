@@ -10,7 +10,7 @@ from closeapps import (closeCRM)
 from genericfunctions import (showDesktop,make_noise,get_username_os,sendEmail,getCurrentDateAndTime,terminateProcess)
 from telegramfunctions import (sendTelegramMsg,sendTelegramMsgWithDocuments)
 import logging
-#from logsfunctions import (setupLogger,setupLogger_2)
+from logsfunctions import (setupLogger)
 from datetime import datetime
 from time import sleep
 
@@ -20,7 +20,7 @@ async def main():
     #     print(pyautogui.position())    
     
     # CONSTANTS
-    TELEGRAM_CHAT_ID = -1002019721248 # PERSONAL CHAT WITH BOT 5970685607 # TELEGRAM CHAT GROUP ID #-1002019721248
+    TELEGRAM_CHAT_ID = 5970685607 # PERSONAL CHAT WITH BOT 5970685607 # TELEGRAM CHAT GROUP ID #-1002019721248
     INPUT_DIRECTORY = 'C:/BOT INSUMO BASE'
     INPUT_FILENAME = 'Input BOT 001 V1.xlsx'
     SUPER_LOG_FILENAME = 'C:/BOT BPO Automation/Version 1.0/logs/super_log.txt'
@@ -29,10 +29,11 @@ async def main():
     CORREOS_CC = 'drobinic.daniel@gmail.com'
 
     # VARIABLES        
+    counter = 1
     total_rows = 0
     total_cols = 0
     resp_funcion = None
-        
+    
     try:
         #***************************************#
         #******* LOGGING CONFIGURATION *********#
@@ -49,7 +50,7 @@ async def main():
         
         print("----------------- BOT BPO v1.0 --------------------")                        
         print("Introduzca el numero de la actividad que desea ejecutar")
-        actividad_rpa = input("1. Cambiar Fechas\n2. Cambiar Usuario\n3. Items de Facturación\n4. Cambio de Estado (Flujo Instalación - pase a entrega final)\n")
+        actividad_rpa = input("1. Cambiar Fechas\n2. Cambiar Usuario\n3. Items de Facturación\n4. Cambio de Estado (Flujo Instalación - pase a entrega final)\n5. Cambio de Estado (Flujo Novedades - pase a entrega final)\n")
             
         if actividad_rpa == "1":
             actividad_rpa_selected = 'CAMBIO DE FECHAS'
@@ -62,6 +63,9 @@ async def main():
             
         elif  actividad_rpa == "4":
             actividad_rpa_selected = 'CAMBIO DE ESTADO (Flujo Instalación - pase a entrega final)'
+        
+        elif  actividad_rpa == "5":
+            actividad_rpa_selected = 'CAMBIO DE ESTADO (Flujo Novedades - pase a entrega final)'
 
         else:
             print("Actividad no permitida!")            
@@ -72,8 +76,7 @@ async def main():
         #*******************************************#
         #************* DATA EXTRACTION *************#
         #*******************************************#
-        # Extract Data from Excel File and Open an 
-        # existing Excel wb file 
+        # Extract Data from Excel File and Open an existing Excel wb file 
         
         file = os.path.join(INPUT_DIRECTORY,INPUT_FILENAME)
         wb = openpyxl.load_workbook(file)
@@ -99,7 +102,7 @@ async def main():
         # Excel Input Base Manipulation
         target_ws = wb.copy_worksheet(ws)
         target_ws.title = "Input Backup"
-        total_rows = len(ws['A'])        
+        total_rows = len(ws['A'])
         total_cols = len(ws[1])
         print("Total de registros en base fuente: ",total_rows-1)
         print("Total de columnas en base fuente: ",total_cols)
@@ -114,9 +117,9 @@ async def main():
         #*************************************#
         
         #CRM        
-        openCRM()
-        sleep(1)
-        connectToCRM()
+        # openCRM()
+        # sleep(1)
+        # connectToCRM()
         logging.warning('Opening APPs Process finished has finished',extra=attrs)        
         
         #*******************************************#
@@ -134,7 +137,7 @@ async def main():
 
             #Interacting with the CRM Depending on the user input call the corresponding method            
             if actividad_rpa.lower() == "1":   
-                print('Validando registro: ',str(row[0].value),row[3].value,row[4].value)
+                print('Validando registro: ',str(row[0].value),row[3].value,row[4].value)                
                 resp_funcion = searchAndUpdateDates(str(row[0].value),row[3].value,row[4].value)
                 print("Respuesta de la función:",resp_funcion)
                 
@@ -150,6 +153,11 @@ async def main():
                 resp_funcion = searchAndUpdateState(str(row[0].value),str(row[5].value),str(row[6].value),str(row[9].value))  
                 print("Respuesta de la función:",resp_funcion)            
             
+            if actividad_rpa.lower() == "5":
+                resp_funcion = searchAndUpdateState(str(row[0].value),str(row[5].value),str(row[6].value),str(row[9].value))  
+                print("Respuesta de la función:",resp_funcion)            
+            
+            
             # Manejo de las posibles respuestas identificadas en los metodos de control
             if resp_funcion == 0:
                 ot_completadas = [str(row[0].value)]
@@ -158,6 +166,9 @@ async def main():
             elif resp_funcion == 10:
                 logging.warning('No se identifica vista de detalles de OT reconocida en el CRM',extra=attrs)
                 row[1].value = 'ERROR - No se identifica vista de detalles de OT reconocida en el CRM'                
+            elif resp_funcion == 9:
+                logging.warning('Se presenta mensaje de advertencia en el proceso en CRM',extra=attrs)                
+                row[1].value = 'ERROR - Se presenta mensaje de advertencia en el proceso en CRM'                    
             else:              
                 row[1].value = 'ERROR - '+ GENERIC_ERROR_MSG
                 logging.warning('No Se ha procesado el incidente: %s',row[0].value,extra=attrs)                
@@ -166,6 +177,17 @@ async def main():
                 sleep(2)
                 openCRM()            
                 connectToCRM()
+                
+            print("Registro(counter) #: ",counter)
+            if counter % 10 == 0:
+                await sendTelegramMsg('Se han procesado '+ str(counter) +' registros y se procede a reiniciar CRM ',TELEGRAM_CHAT_ID)
+                terminateProcess('CRM.exe')
+                print("Se ha terminado el proceso CRM.exe")
+                sleep(2)
+                openCRM()
+                connectToCRM()
+                                            
+            counter = counter + 1
             wb.save(file) 
                        
         print("Fin del Proceso Macro")
@@ -188,8 +210,13 @@ async def main():
     except Exception as e:
         
         print(f"An error occurred: {e}")
-        logging.warning('Error Occurred: %s',e,extra=attrs)
-        logging.warning('Error Occurred v2: %s',sys.exc_info()[0],extra=attrs)        
+        logging.warning('Error Occurred: %s',e,extra=attrs)        
+        e_type, e_object, e_traceback = sys.exc_info()
+        e_line_number = e_traceback.tb_lineno
+        logging.warning('Error Occurred v2 (e_type): %s',e_type,extra=attrs)        
+        logging.warning('Error Occurred v2 (e_object): %s',e_object,extra=attrs)        
+        logging.warning('Error Occurred v2 (e_traceback): %s',e_traceback,extra=attrs)  
+        logging.warning('Error Occurred v2 (e_line_number): %s',e_line_number,extra=attrs)        
         #await sendTelegramMsg('END - Error de Ejecución: ' + str(e) + ' - RPA ' + actividad_rpa_selected + '.\n'+'Tipo de Error: '+str(sys.exc_info()[0]),TELEGRAM_CHAT_ID)
         # sendEmail(
         #     'END - Error de Ejecución: ' + e + ' - RPA ' + actividad_rpa_selected,
@@ -200,6 +227,7 @@ async def main():
         #     'null'
         # )
         exit_program()
+    
     else:
         #*******************************************#
         #******** IF NO ERRORS OCCURRED ************#
@@ -218,8 +246,8 @@ async def main():
         # Esto se ejecutara si el bloque try se ejecuta sin errores
         print("Try block succesfully executed")
         logging.warning('Main Function finished naturally',extra=attrs)
-        #await sendTelegramMsg('END - RPA '+actividad_rpa_selected+' ha finalizado.\n' + 'Usuario ['+ get_username_os() +']\nTiempo de finalización:'+ getCurrentDateAndTime(),TELEGRAM_CHAT_ID)
-        #await sendTelegramMsgWithDocuments(TELEGRAM_CHAT_ID)        
+        await sendTelegramMsg('END - RPA '+actividad_rpa_selected+' ha finalizado.\n' + 'Usuario ['+ get_username_os() +']\nTiempo de finalización:'+ getCurrentDateAndTime(),TELEGRAM_CHAT_ID)
+        await sendTelegramMsgWithDocuments(TELEGRAM_CHAT_ID)        
         # sendEmail(
         #     'END - RPA '+ actividad_rpa_selected +' ha finalizado',
         #     CORREOS_DESTINO,

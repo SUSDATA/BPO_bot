@@ -1,0 +1,20 @@
+12/19/2023 10:39:23 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE ESTADO (Flujo Instalación - pase a entrega final) 
+12/19/2023 10:39:23 PM - root - dgard - WARNING - 159 registros en base fuente
+12/19/2023 10:39:23 PM - root - dgard - WARNING - Extract Data Process Finished
+12/19/2023 10:39:23 PM - root - dgard - WARNING - Opening APPs Process finished has finished
+12/19/2023 10:39:23 PM - root - dgard - WARNING - -------------------------------
+12/19/2023 10:40:12 PM - root - dgard - WARNING - Se ha procesado el incidente: 20513078
+12/19/2023 10:41:02 PM - root - dgard - WARNING - Se ha procesado el incidente: 20513098
+12/19/2023 10:41:51 PM - root - dgard - WARNING - Se ha procesado el incidente: 20513121
+12/19/2023 10:42:40 PM - root - dgard - WARNING - Se ha procesado el incidente: 20513154
+12/19/2023 10:43:29 PM - root - dgard - WARNING - Se ha procesado el incidente: 20513229
+12/19/2023 10:44:18 PM - root - dgard - WARNING - Se ha procesado el incidente: 20513284
+12/19/2023 10:45:06 PM - root - dgard - WARNING - Se ha procesado el incidente: 20513300
+12/19/2023 10:45:57 PM - root - dgard - WARNING - Se ha procesado el incidente: 20513321
+12/19/2023 10:46:48 PM - root - dgard - WARNING - Se ha procesado el incidente: 20513367
+12/19/2023 10:47:40 PM - root - dgard - WARNING - Se ha procesado el incidente: 20513465
+12/19/2023 10:47:51 PM - root - dgard - WARNING - Error Occurred: argument of type 'NoneType' is not iterable
+12/19/2023 10:47:51 PM - root - dgard - WARNING - Error Occurred v2 (e_type): <class 'TypeError'>
+12/19/2023 10:47:51 PM - root - dgard - WARNING - Error Occurred v2 (e_object): argument of type 'NoneType' is not iterable
+12/19/2023 10:47:51 PM - root - dgard - WARNING - Error Occurred v2 (e_traceback): <traceback object at 0x00000222CD6EE440>
+12/19/2023 10:47:51 PM - root - dgard - WARNING - Error Occurred v2 (e_line_number): 180

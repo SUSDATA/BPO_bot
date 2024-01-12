@@ -1,0 +1,10 @@
+01/08/2024 04:14:35 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE USUARIO 
+01/08/2024 04:14:37 PM - root - dgard - WARNING - 146 registros en base fuente
+01/08/2024 04:14:37 PM - root - dgard - WARNING - Extract Data Process Finished
+01/08/2024 04:14:37 PM - root - dgard - WARNING - Opening APPs Process finished has finished
+01/08/2024 04:14:37 PM - root - dgard - WARNING - -------------------------------
+01/08/2024 04:14:47 PM - root - dgard - WARNING - Error Occurred: cannot access local variable 'crm_ot_blocked_message' where it is not associated with a value
+01/08/2024 04:14:47 PM - root - dgard - WARNING - Error Occurred v2 (e_type): <class 'UnboundLocalError'>
+01/08/2024 04:14:47 PM - root - dgard - WARNING - Error Occurred v2 (e_object): cannot access local variable 'crm_ot_blocked_message' where it is not associated with a value
+01/08/2024 04:14:47 PM - root - dgard - WARNING - Error Occurred v2 (e_traceback): <traceback object at 0x000001347B1A4040>
+01/08/2024 04:14:47 PM - root - dgard - WARNING - Error Occurred v2 (e_line_number): 145

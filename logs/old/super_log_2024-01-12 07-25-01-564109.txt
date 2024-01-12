@@ -1,0 +1,10 @@
+01/12/2024 07:24:45 AM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE USUARIO 
+01/12/2024 07:24:46 AM - root - dgard - WARNING - 1541 registros en base fuente
+01/12/2024 07:24:46 AM - root - dgard - WARNING - Extract Data Process Finished
+01/12/2024 07:24:46 AM - root - dgard - WARNING - Opening APPs Process finished has finished
+01/12/2024 07:24:46 AM - root - dgard - WARNING - -------------------------------
+01/12/2024 07:25:01 AM - root - dgard - WARNING - Error Occurred: 'NoneType' object is not subscriptable
+01/12/2024 07:25:01 AM - root - dgard - WARNING - Error Occurred v2 (e_type): <class 'TypeError'>
+01/12/2024 07:25:01 AM - root - dgard - WARNING - Error Occurred v2 (e_object): 'NoneType' object is not subscriptable
+01/12/2024 07:25:01 AM - root - dgard - WARNING - Error Occurred v2 (e_traceback): <traceback object at 0x0000013F19EF5940>
+01/12/2024 07:25:01 AM - root - dgard - WARNING - Error Occurred v2 (e_line_number): 145

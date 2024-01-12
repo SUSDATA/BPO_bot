@@ -1,0 +1,10 @@
+11/30/2023 09:20:57 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE FECHAS 
+11/30/2023 09:20:57 PM - root - dgard - WARNING - 530 registros en base fuente
+11/30/2023 09:20:57 PM - root - dgard - WARNING - Extract Data Process Finished
+11/30/2023 09:20:57 PM - root - dgard - WARNING - -------------------------------
+11/30/2023 09:21:38 PM - root - dgard - WARNING - Se ha procesado el incidente: 20303608
+11/30/2023 09:21:54 PM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+11/30/2023 09:22:33 PM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+11/30/2023 09:23:18 PM - root - dgard - WARNING - Se ha procesado el incidente: 20303715
+11/30/2023 09:24:03 PM - root - dgard - WARNING - Se ha procesado el incidente: 20372297
+11/30/2023 09:24:38 PM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM

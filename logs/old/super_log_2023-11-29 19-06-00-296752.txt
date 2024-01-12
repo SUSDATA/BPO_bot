@@ -1,0 +1,30 @@
+11/29/2023 06:47:56 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE FECHAS 
+11/29/2023 06:47:56 PM - root - dgard - WARNING - 737 registros en base fuente
+11/29/2023 06:47:56 PM - root - dgard - WARNING - Extract Data Process Finished
+11/29/2023 06:47:56 PM - root - dgard - WARNING - -------------------------------
+11/29/2023 06:48:36 PM - root - dgard - WARNING - Se ha procesado el incidente: 20234531
+11/29/2023 06:49:11 PM - root - dgard - WARNING - Se ha procesado el incidente: 20295798
+11/29/2023 06:49:42 PM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+11/29/2023 06:50:19 PM - root - dgard - WARNING - Se ha procesado el incidente: 20203939
+11/29/2023 06:50:53 PM - root - dgard - WARNING - Se ha procesado el incidente: 20203865
+11/29/2023 06:51:27 PM - root - dgard - WARNING - Se ha procesado el incidente: 20203862
+11/29/2023 06:52:02 PM - root - dgard - WARNING - Se ha procesado el incidente: 20203886
+11/29/2023 06:52:35 PM - root - dgard - WARNING - Se ha procesado el incidente: 20203856
+11/29/2023 06:53:10 PM - root - dgard - WARNING - Se ha procesado el incidente: 20203859
+11/29/2023 06:53:43 PM - root - dgard - WARNING - Se ha procesado el incidente: 20205947
+11/29/2023 06:55:28 PM - root - dgard - WARNING - Se ha procesado el incidente: 20205911
+11/29/2023 06:56:00 PM - root - dgard - WARNING - Se ha procesado el incidente: 20206005
+11/29/2023 06:56:35 PM - root - dgard - WARNING - Se ha procesado el incidente: 20203718
+11/29/2023 06:57:12 PM - root - dgard - WARNING - Se ha procesado el incidente: 20203711
+11/29/2023 06:57:47 PM - root - dgard - WARNING - Se ha procesado el incidente: 20203724
+11/29/2023 06:58:23 PM - root - dgard - WARNING - Se ha procesado el incidente: 20203731
+11/29/2023 06:58:58 PM - root - dgard - WARNING - Se ha procesado el incidente: 20203905
+11/29/2023 06:59:33 PM - root - dgard - WARNING - Se ha procesado el incidente: 20336924
+11/29/2023 07:00:05 PM - root - dgard - WARNING - Se ha procesado el incidente: 20309030
+11/29/2023 07:00:33 PM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+11/29/2023 07:01:45 PM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+11/29/2023 07:06:00 PM - root - dgard - WARNING - Error Occurred: screen grab failed
+11/29/2023 07:06:00 PM - root - dgard - WARNING - Error Occurred v2 (e_type): <class 'OSError'>
+11/29/2023 07:06:00 PM - root - dgard - WARNING - Error Occurred v2 (e_object): screen grab failed
+11/29/2023 07:06:00 PM - root - dgard - WARNING - Error Occurred v2 (e_traceback): <traceback object at 0x000002AAC0738180>
+11/29/2023 07:06:00 PM - root - dgard - WARNING - Error Occurred v2 (e_line_number): 139

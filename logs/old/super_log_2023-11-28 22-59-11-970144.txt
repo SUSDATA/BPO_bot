@@ -1,0 +1,23 @@
+11/28/2023 08:42:28 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE FECHAS 
+11/28/2023 08:42:28 PM - root - dgard - WARNING - 737 registros en base fuente
+11/28/2023 08:42:28 PM - root - dgard - WARNING - Extract Data Process Finished
+11/28/2023 08:42:28 PM - root - dgard - WARNING - -------------------------------
+11/28/2023 08:43:03 PM - root - dgard - WARNING - Se ha procesado el incidente: 20265063
+11/28/2023 08:43:38 PM - root - dgard - WARNING - Se ha procesado el incidente: 20265068
+11/28/2023 08:44:13 PM - root - dgard - WARNING - Se ha procesado el incidente: 20265074
+11/28/2023 08:44:47 PM - root - dgard - WARNING - Se ha procesado el incidente: 19992117
+11/28/2023 08:45:22 PM - root - dgard - WARNING - Se ha procesado el incidente: 19992120
+11/28/2023 08:45:55 PM - root - dgard - WARNING - Se ha procesado el incidente: 19992113
+11/28/2023 08:46:30 PM - root - dgard - WARNING - Se ha procesado el incidente: 19992270
+11/28/2023 08:47:02 PM - root - dgard - WARNING - Se ha procesado el incidente: 18341245
+11/28/2023 08:47:35 PM - root - dgard - WARNING - Se ha procesado el incidente: 18341240
+11/28/2023 08:48:08 PM - root - dgard - WARNING - Se ha procesado el incidente: 20278808
+11/28/2023 08:49:35 PM - root - dgard - WARNING - Se ha procesado el incidente: 20278727
+11/28/2023 08:50:07 PM - root - dgard - WARNING - Se ha procesado el incidente: 20298012
+11/28/2023 08:50:38 PM - root - dgard - WARNING - Se ha procesado el incidente: 20299056
+11/28/2023 08:51:12 PM - root - dgard - WARNING - Se ha procesado el incidente: 18363366
+11/28/2023 08:51:45 PM - root - dgard - WARNING - Se ha procesado el incidente: 18825260
+11/28/2023 08:52:18 PM - root - dgard - WARNING - Se ha procesado el incidente: 18825273
+11/28/2023 08:52:50 PM - root - dgard - WARNING - Se ha procesado el incidente: 18825254
+11/28/2023 08:53:22 PM - root - dgard - WARNING - Se ha procesado el incidente: 18825305
+11/28/2023 08:53:51 PM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM

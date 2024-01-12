@@ -1,0 +1,30 @@
+12/19/2023 09:28:47 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE ESTADO (Flujo Instalación - pase a entrega final) 
+12/19/2023 09:28:47 PM - root - dgard - WARNING - 159 registros en base fuente
+12/19/2023 09:28:47 PM - root - dgard - WARNING - Extract Data Process Finished
+12/19/2023 09:28:47 PM - root - dgard - WARNING - Opening APPs Process finished has finished
+12/19/2023 09:28:47 PM - root - dgard - WARNING - -------------------------------
+12/19/2023 09:29:29 PM - root - dgard - WARNING - Se ha procesado el incidente: 20511797
+12/19/2023 09:30:09 PM - root - dgard - WARNING - Se ha procesado el incidente: 20511821
+12/19/2023 09:30:49 PM - root - dgard - WARNING - Se ha procesado el incidente: 20510515
+12/19/2023 09:31:30 PM - root - dgard - WARNING - Se ha procesado el incidente: 20510204
+12/19/2023 09:32:11 PM - root - dgard - WARNING - Se ha procesado el incidente: 20510183
+12/19/2023 09:32:52 PM - root - dgard - WARNING - Se ha procesado el incidente: 20510164
+12/19/2023 09:33:33 PM - root - dgard - WARNING - Se ha procesado el incidente: 20511841
+12/19/2023 09:34:14 PM - root - dgard - WARNING - Se ha procesado el incidente: 20511877
+12/19/2023 09:34:55 PM - root - dgard - WARNING - Se ha procesado el incidente: 20511896
+12/19/2023 09:35:35 PM - root - dgard - WARNING - Se ha procesado el incidente: 20511919
+12/19/2023 09:37:08 PM - root - dgard - WARNING - Se ha procesado el incidente: 20511947
+12/19/2023 09:37:49 PM - root - dgard - WARNING - Se ha procesado el incidente: 20511979
+12/19/2023 09:38:30 PM - root - dgard - WARNING - Se ha procesado el incidente: 20512005
+12/19/2023 09:39:10 PM - root - dgard - WARNING - Se ha procesado el incidente: 20512028
+12/19/2023 09:39:50 PM - root - dgard - WARNING - Se ha procesado el incidente: 20512099
+12/19/2023 09:40:31 PM - root - dgard - WARNING - Se ha procesado el incidente: 20512120
+12/19/2023 09:41:12 PM - root - dgard - WARNING - Se ha procesado el incidente: 20512152
+12/19/2023 09:41:52 PM - root - dgard - WARNING - Se ha procesado el incidente: 20512167
+12/19/2023 09:42:32 PM - root - dgard - WARNING - Se ha procesado el incidente: 20512211
+12/19/2023 09:43:14 PM - root - dgard - WARNING - Se ha procesado el incidente: 20512227
+12/19/2023 09:43:24 PM - root - dgard - WARNING - Error Occurred: argument of type 'NoneType' is not iterable
+12/19/2023 09:43:24 PM - root - dgard - WARNING - Error Occurred v2 (e_type): <class 'TypeError'>
+12/19/2023 09:43:24 PM - root - dgard - WARNING - Error Occurred v2 (e_object): argument of type 'NoneType' is not iterable
+12/19/2023 09:43:24 PM - root - dgard - WARNING - Error Occurred v2 (e_traceback): <traceback object at 0x00000213709D5300>
+12/19/2023 09:43:24 PM - root - dgard - WARNING - Error Occurred v2 (e_line_number): 180

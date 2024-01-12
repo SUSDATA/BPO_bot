@@ -1,0 +1,10 @@
+11/29/2023 04:24:25 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE FECHAS 
+11/29/2023 04:24:25 PM - root - dgard - WARNING - 737 registros en base fuente
+11/29/2023 04:24:25 PM - root - dgard - WARNING - Extract Data Process Finished
+11/29/2023 04:24:25 PM - root - dgard - WARNING - -------------------------------
+11/29/2023 04:24:42 PM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+11/29/2023 04:24:42 PM - root - dgard - WARNING - Error Occurred: [Errno 13] Permission denied: 'C:/BOT INSUMO BASE\\Input BOT 001 V1.xlsx'
+11/29/2023 04:24:42 PM - root - dgard - WARNING - Error Occurred v2 (e_type): <class 'PermissionError'>
+11/29/2023 04:24:42 PM - root - dgard - WARNING - Error Occurred v2 (e_object): [Errno 13] Permission denied: 'C:/BOT INSUMO BASE\\Input BOT 001 V1.xlsx'
+11/29/2023 04:24:42 PM - root - dgard - WARNING - Error Occurred v2 (e_traceback): <traceback object at 0x0000022EC3479600>
+11/29/2023 04:24:42 PM - root - dgard - WARNING - Error Occurred v2 (e_line_number): 185

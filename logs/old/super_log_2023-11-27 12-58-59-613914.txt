@@ -1,0 +1,31 @@
+11/27/2023 12:27:00 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE FECHAS 
+11/27/2023 12:27:00 PM - root - dgard - WARNING - 95 registros en base fuente
+11/27/2023 12:27:00 PM - root - dgard - WARNING - Extract Data Process Finished
+11/27/2023 12:27:00 PM - root - dgard - WARNING - -------------------------------
+11/27/2023 12:27:46 PM - root - dgard - WARNING - Se ha procesado el incidente: 19892770
+11/27/2023 12:28:32 PM - root - dgard - WARNING - Se ha procesado el incidente: 19892790
+11/27/2023 12:29:16 PM - root - dgard - WARNING - Se ha procesado el incidente: 19973642
+11/27/2023 12:29:59 PM - root - dgard - WARNING - Se ha procesado el incidente: 19973679
+11/27/2023 12:30:43 PM - root - dgard - WARNING - Se ha procesado el incidente: 20057608
+11/27/2023 12:31:25 PM - root - dgard - WARNING - Se ha procesado el incidente: 20057639
+11/27/2023 12:32:11 PM - root - dgard - WARNING - Se ha procesado el incidente: 18408493
+11/27/2023 12:32:54 PM - root - dgard - WARNING - Se ha procesado el incidente: 20068306
+11/27/2023 12:33:37 PM - root - dgard - WARNING - Se ha procesado el incidente: 19879309
+11/27/2023 12:34:22 PM - root - dgard - WARNING - Se ha procesado el incidente: 20147136
+11/27/2023 12:35:47 PM - root - dgard - WARNING - Se ha procesado el incidente: 20339664
+11/27/2023 12:36:26 PM - root - dgard - WARNING - Se ha procesado el incidente: 20345455
+11/27/2023 12:37:05 PM - root - dgard - WARNING - Se ha procesado el incidente: 19983872
+11/27/2023 12:37:43 PM - root - dgard - WARNING - Se ha procesado el incidente: 19928116
+11/27/2023 12:38:24 PM - root - dgard - WARNING - Se ha procesado el incidente: 18965091
+11/27/2023 12:39:04 PM - root - dgard - WARNING - Se ha procesado el incidente: 20056377
+11/27/2023 12:39:42 PM - root - dgard - WARNING - Se ha procesado el incidente: 19878912
+11/27/2023 12:40:22 PM - root - dgard - WARNING - Se ha procesado el incidente: 19879122
+11/27/2023 12:41:01 PM - root - dgard - WARNING - Se ha procesado el incidente: 19879311
+11/27/2023 12:41:41 PM - root - dgard - WARNING - Se ha procesado el incidente: 20041057
+11/27/2023 12:43:07 PM - root - dgard - WARNING - Se ha procesado el incidente: 19878432
+11/27/2023 12:43:43 PM - root - dgard - WARNING - Se ha procesado el incidente: 20041062
+11/27/2023 12:44:22 PM - root - dgard - WARNING - Se ha procesado el incidente: 19879279
+11/27/2023 12:44:59 PM - root - dgard - WARNING - Se ha procesado el incidente: 19878957
+11/27/2023 12:45:39 PM - root - dgard - WARNING - Se ha procesado el incidente: 19879218
+11/27/2023 12:58:59 PM - root - dgard - WARNING - Error Occurred: screen grab failed
+11/27/2023 12:58:59 PM - root - dgard - WARNING - Error Occurred v2: <class 'OSError'>

@@ -1,0 +1,10 @@
+01/10/2024 05:42:50 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE USUARIO 
+01/10/2024 05:42:50 PM - root - dgard - WARNING - 2536 registros en base fuente
+01/10/2024 05:42:50 PM - root - dgard - WARNING - Extract Data Process Finished
+01/10/2024 05:42:50 PM - root - dgard - WARNING - Opening APPs Process finished has finished
+01/10/2024 05:42:50 PM - root - dgard - WARNING - -------------------------------
+01/10/2024 05:42:57 PM - root - dgard - WARNING - Error Occurred: needle dimension(s) exceed the haystack image or region dimensions
+01/10/2024 05:42:57 PM - root - dgard - WARNING - Error Occurred v2 (e_type): <class 'ValueError'>
+01/10/2024 05:42:57 PM - root - dgard - WARNING - Error Occurred v2 (e_object): needle dimension(s) exceed the haystack image or region dimensions
+01/10/2024 05:42:57 PM - root - dgard - WARNING - Error Occurred v2 (e_traceback): <traceback object at 0x000002B115103380>
+01/10/2024 05:42:57 PM - root - dgard - WARNING - Error Occurred v2 (e_line_number): 145

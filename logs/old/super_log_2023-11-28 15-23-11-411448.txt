@@ -1,0 +1,9 @@
+11/28/2023 03:21:45 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE FECHAS 
+11/28/2023 03:21:45 PM - root - dgard - WARNING - 737 registros en base fuente
+11/28/2023 03:21:45 PM - root - dgard - WARNING - Extract Data Process Finished
+11/28/2023 03:21:45 PM - root - dgard - WARNING - -------------------------------
+11/28/2023 03:23:11 PM - root - dgard - WARNING - Error Occurred: 'NoneType' object is not subscriptable
+11/28/2023 03:23:11 PM - root - dgard - WARNING - Error Occurred v2 (e_type): <class 'TypeError'>
+11/28/2023 03:23:11 PM - root - dgard - WARNING - Error Occurred v2 (e_object): 'NoneType' object is not subscriptable
+11/28/2023 03:23:11 PM - root - dgard - WARNING - Error Occurred v2 (e_traceback): <traceback object at 0x0000013806B3CBC0>
+11/28/2023 03:23:11 PM - root - dgard - WARNING - Error Occurred v2 (e_line_number): 140

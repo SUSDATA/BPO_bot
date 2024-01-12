@@ -1,0 +1,11 @@
+01/08/2024 04:36:36 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE USUARIO 
+01/08/2024 04:36:36 PM - root - dgard - WARNING - 2536 registros en base fuente
+01/08/2024 04:36:36 PM - root - dgard - WARNING - Extract Data Process Finished
+01/08/2024 04:36:36 PM - root - dgard - WARNING - Opening APPs Process finished has finished
+01/08/2024 04:36:36 PM - root - dgard - WARNING - -------------------------------
+01/08/2024 04:37:20 PM - root - dgard - WARNING - Se ha procesado el incidente: 20161659
+01/08/2024 04:37:20 PM - root - dgard - WARNING - Error Occurred: [Errno 13] Permission denied: 'C:/BOT INSUMO BASE\\Input BOT 001 V1.xlsx'
+01/08/2024 04:37:20 PM - root - dgard - WARNING - Error Occurred v2 (e_type): <class 'PermissionError'>
+01/08/2024 04:37:20 PM - root - dgard - WARNING - Error Occurred v2 (e_object): [Errno 13] Permission denied: 'C:/BOT INSUMO BASE\\Input BOT 001 V1.xlsx'
+01/08/2024 04:37:20 PM - root - dgard - WARNING - Error Occurred v2 (e_traceback): <traceback object at 0x00000252B6A232C0>
+01/08/2024 04:37:20 PM - root - dgard - WARNING - Error Occurred v2 (e_line_number): 191

@@ -1,0 +1,63 @@
+12/20/2023 02:59:27 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE FECHAS 
+12/20/2023 02:59:27 PM - root - dgard - WARNING - 295 registros en base fuente
+12/20/2023 02:59:27 PM - root - dgard - WARNING - Extract Data Process Finished
+12/20/2023 02:59:27 PM - root - dgard - WARNING - Opening APPs Process finished has finished
+12/20/2023 02:59:27 PM - root - dgard - WARNING - -------------------------------
+12/20/2023 03:00:04 PM - root - dgard - WARNING - Se ha procesado el incidente: 20418043
+12/20/2023 03:00:37 PM - root - dgard - WARNING - Se ha procesado el incidente: 20417980
+12/20/2023 03:01:12 PM - root - dgard - WARNING - Se ha procesado el incidente: 20417985
+12/20/2023 03:01:47 PM - root - dgard - WARNING - Se ha procesado el incidente: 20418000
+12/20/2023 03:02:20 PM - root - dgard - WARNING - Se ha procesado el incidente: 20417439
+12/20/2023 03:02:54 PM - root - dgard - WARNING - Se ha procesado el incidente: 20418320
+12/20/2023 03:03:28 PM - root - dgard - WARNING - Se ha procesado el incidente: 20417460
+12/20/2023 03:04:00 PM - root - dgard - WARNING - Se ha procesado el incidente: 20417411
+12/20/2023 03:04:33 PM - root - dgard - WARNING - Se ha procesado el incidente: 20418143
+12/20/2023 03:05:07 PM - root - dgard - WARNING - Se ha procesado el incidente: 20418127
+12/20/2023 03:06:26 PM - root - dgard - WARNING - Se ha procesado el incidente: 20418091
+12/20/2023 03:07:01 PM - root - dgard - WARNING - Se ha procesado el incidente: 20417928
+12/20/2023 03:07:34 PM - root - dgard - WARNING - Se ha procesado el incidente: 20417420
+12/20/2023 03:08:08 PM - root - dgard - WARNING - Se ha procesado el incidente: 20417452
+12/20/2023 03:08:42 PM - root - dgard - WARNING - Se ha procesado el incidente: 20418010
+12/20/2023 03:09:17 PM - root - dgard - WARNING - Se ha procesado el incidente: 20417880
+12/20/2023 03:09:52 PM - root - dgard - WARNING - Se ha procesado el incidente: 20417322
+12/20/2023 03:10:26 PM - root - dgard - WARNING - Se ha procesado el incidente: 20417933
+12/20/2023 03:11:01 PM - root - dgard - WARNING - Se ha procesado el incidente: 20417480
+12/20/2023 03:11:42 PM - root - dgard - WARNING - Se ha procesado el incidente: 20417846
+12/20/2023 03:13:06 PM - root - dgard - WARNING - Se ha procesado el incidente: 20418076
+12/20/2023 03:13:41 PM - root - dgard - WARNING - Se ha procesado el incidente: 20418133
+12/20/2023 03:14:17 PM - root - dgard - WARNING - Se ha procesado el incidente: 20417375
+12/20/2023 03:14:52 PM - root - dgard - WARNING - Se ha procesado el incidente: 20418176
+12/20/2023 03:15:25 PM - root - dgard - WARNING - Se ha procesado el incidente: 20417888
+12/20/2023 03:15:58 PM - root - dgard - WARNING - Se ha procesado el incidente: 20417853
+12/20/2023 03:16:33 PM - root - dgard - WARNING - Se ha procesado el incidente: 20482711
+12/20/2023 03:17:07 PM - root - dgard - WARNING - Se ha procesado el incidente: 20489468
+12/20/2023 03:17:41 PM - root - dgard - WARNING - Se ha procesado el incidente: 19719743
+12/20/2023 03:18:17 PM - root - dgard - WARNING - Se ha procesado el incidente: 18144728
+12/20/2023 03:19:37 PM - root - dgard - WARNING - Se ha procesado el incidente: 18144861
+12/20/2023 03:20:10 PM - root - dgard - WARNING - Se ha procesado el incidente: 19496736
+12/20/2023 03:20:44 PM - root - dgard - WARNING - Se ha procesado el incidente: 19975691
+12/20/2023 03:21:18 PM - root - dgard - WARNING - Se ha procesado el incidente: 20157719
+12/20/2023 03:21:52 PM - root - dgard - WARNING - Se ha procesado el incidente: 20157757
+12/20/2023 03:22:28 PM - root - dgard - WARNING - Se ha procesado el incidente: 20157769
+12/20/2023 03:23:04 PM - root - dgard - WARNING - Se ha procesado el incidente: 20410053
+12/20/2023 03:23:39 PM - root - dgard - WARNING - Se ha procesado el incidente: 20409941
+12/20/2023 03:24:14 PM - root - dgard - WARNING - Se ha procesado el incidente: 20383160
+12/20/2023 03:24:48 PM - root - dgard - WARNING - Se ha procesado el incidente: 20383102
+12/20/2023 03:26:11 PM - root - dgard - WARNING - Se ha procesado el incidente: 20383007
+12/20/2023 03:26:47 PM - root - dgard - WARNING - Se ha procesado el incidente: 20489321
+12/20/2023 03:27:22 PM - root - dgard - WARNING - Se ha procesado el incidente: 19497108
+12/20/2023 03:27:58 PM - root - dgard - WARNING - Se ha procesado el incidente: 19719817
+12/20/2023 03:28:32 PM - root - dgard - WARNING - Se ha procesado el incidente: 19719840
+12/20/2023 03:29:08 PM - root - dgard - WARNING - Se ha procesado el incidente: 19719859
+12/20/2023 03:29:44 PM - root - dgard - WARNING - Se ha procesado el incidente: 19979053
+12/20/2023 03:30:20 PM - root - dgard - WARNING - Se ha procesado el incidente: 19983542
+12/20/2023 03:30:56 PM - root - dgard - WARNING - Se ha procesado el incidente: 20044697
+12/20/2023 03:31:11 PM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+12/20/2023 03:32:36 PM - root - dgard - WARNING - Se ha procesado el incidente: 20157227
+12/20/2023 03:33:14 PM - root - dgard - WARNING - Se ha procesado el incidente: 19496805
+12/20/2023 03:33:53 PM - root - dgard - WARNING - Se ha procesado el incidente: 19568041
+12/20/2023 03:34:29 PM - root - dgard - WARNING - Se ha procesado el incidente: 20158934
+12/20/2023 03:35:06 PM - root - dgard - WARNING - Se ha procesado el incidente: 20537192
+12/20/2023 03:35:42 PM - root - dgard - WARNING - Se ha procesado el incidente: 20537164
+12/20/2023 03:35:42 PM - root - dgard - WARNING - -------------------------------
+12/20/2023 03:35:45 PM - root - dgard - WARNING - Main Function finished naturally

@@ -1,0 +1,15 @@
+01/10/2024 05:47:12 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE USUARIO 
+01/10/2024 05:47:13 PM - root - dgard - WARNING - 2536 registros en base fuente
+01/10/2024 05:47:13 PM - root - dgard - WARNING - Extract Data Process Finished
+01/10/2024 05:47:13 PM - root - dgard - WARNING - Opening APPs Process finished has finished
+01/10/2024 05:47:13 PM - root - dgard - WARNING - -------------------------------
+01/10/2024 05:47:31 PM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+01/10/2024 05:48:17 PM - root - dgard - WARNING - Se ha procesado el incidente: 20459889
+01/10/2024 05:49:02 PM - root - dgard - WARNING - Se ha procesado el incidente: 20382409
+01/10/2024 05:49:47 PM - root - dgard - WARNING - Se ha procesado el incidente: 20359647
+01/10/2024 05:50:32 PM - root - dgard - WARNING - Se ha procesado el incidente: 20359549
+01/10/2024 05:51:16 PM - root - dgard - WARNING - Se ha procesado el incidente: 20361071
+01/10/2024 05:52:01 PM - root - dgard - WARNING - Se ha procesado el incidente: 20359416
+01/10/2024 05:52:47 PM - root - dgard - WARNING - Se ha procesado el incidente: 20359594
+01/10/2024 05:53:32 PM - root - dgard - WARNING - Se ha procesado el incidente: 20359713
+01/10/2024 05:54:17 PM - root - dgard - WARNING - Se ha procesado el incidente: 20359694

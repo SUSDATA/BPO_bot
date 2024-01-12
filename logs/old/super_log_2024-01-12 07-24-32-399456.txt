@@ -1,0 +1,10 @@
+01/12/2024 07:24:04 AM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE USUARIO 
+01/12/2024 07:24:04 AM - root - dgard - WARNING - 1541 registros en base fuente
+01/12/2024 07:24:04 AM - root - dgard - WARNING - Extract Data Process Finished
+01/12/2024 07:24:04 AM - root - dgard - WARNING - Opening APPs Process finished has finished
+01/12/2024 07:24:04 AM - root - dgard - WARNING - -------------------------------
+01/12/2024 07:24:32 AM - root - dgard - WARNING - Error Occurred: list index out of range
+01/12/2024 07:24:32 AM - root - dgard - WARNING - Error Occurred v2 (e_type): <class 'IndexError'>
+01/12/2024 07:24:32 AM - root - dgard - WARNING - Error Occurred v2 (e_object): list index out of range
+01/12/2024 07:24:32 AM - root - dgard - WARNING - Error Occurred v2 (e_traceback): <traceback object at 0x0000021402A9C280>
+01/12/2024 07:24:32 AM - root - dgard - WARNING - Error Occurred v2 (e_line_number): 145

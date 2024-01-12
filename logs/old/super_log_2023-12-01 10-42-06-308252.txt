@@ -1,0 +1,64 @@
+12/01/2023 09:04:23 AM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE FECHAS 
+12/01/2023 09:04:23 AM - root - dgard - WARNING - 530 registros en base fuente
+12/01/2023 09:04:23 AM - root - dgard - WARNING - Extract Data Process Finished
+12/01/2023 09:04:23 AM - root - dgard - WARNING - -------------------------------
+12/01/2023 09:04:44 AM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+12/01/2023 09:05:32 AM - root - dgard - WARNING - Se ha procesado el incidente: 20068834
+12/01/2023 09:06:15 AM - root - dgard - WARNING - Se ha procesado el incidente: 20068840
+12/01/2023 09:06:59 AM - root - dgard - WARNING - Se ha procesado el incidente: 20068782
+12/01/2023 09:07:46 AM - root - dgard - WARNING - Se ha procesado el incidente: 19834705
+12/01/2023 09:11:04 AM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+12/01/2023 09:16:53 AM - root - dgard - WARNING - Se ha procesado el incidente: 19841893
+12/01/2023 09:17:41 AM - root - dgard - WARNING - Se ha procesado el incidente: 19842118
+12/01/2023 09:18:26 AM - root - dgard - WARNING - Se ha procesado el incidente: 19842013
+12/01/2023 09:19:13 AM - root - dgard - WARNING - Se ha procesado el incidente: 19834327
+12/01/2023 09:20:55 AM - root - dgard - WARNING - Se ha procesado el incidente: 19834420
+12/01/2023 09:21:49 AM - root - dgard - WARNING - Se ha procesado el incidente: 19834365
+12/01/2023 09:22:33 AM - root - dgard - WARNING - Se ha procesado el incidente: 19834720
+12/01/2023 09:23:18 AM - root - dgard - WARNING - Se ha procesado el incidente: 20145461
+12/01/2023 09:24:06 AM - root - dgard - WARNING - Se ha procesado el incidente: 20145532
+12/01/2023 09:24:50 AM - root - dgard - WARNING - Se ha procesado el incidente: 20145501
+12/01/2023 09:25:33 AM - root - dgard - WARNING - Se ha procesado el incidente: 19834761
+12/01/2023 09:28:47 AM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+12/01/2023 09:30:52 AM - root - dgard - WARNING - Se ha procesado el incidente: 19943567
+12/01/2023 09:32:44 AM - root - dgard - WARNING - Se ha procesado el incidente: 19943758
+12/01/2023 09:35:46 AM - root - dgard - WARNING - Se ha procesado el incidente: 19943905
+12/01/2023 09:36:28 AM - root - dgard - WARNING - Se ha procesado el incidente: 19902903
+12/01/2023 09:37:12 AM - root - dgard - WARNING - Se ha procesado el incidente: 19834594
+12/01/2023 09:38:04 AM - root - dgard - WARNING - Se ha procesado el incidente: 20154054
+12/01/2023 09:38:47 AM - root - dgard - WARNING - Se ha procesado el incidente: 19902689
+12/01/2023 09:41:18 AM - root - dgard - WARNING - Se ha procesado el incidente: 19834611
+12/01/2023 09:43:19 AM - root - dgard - WARNING - Se ha procesado el incidente: 20154101
+12/01/2023 09:44:06 AM - root - dgard - WARNING - Se ha procesado el incidente: 19902663
+12/01/2023 09:46:00 AM - root - dgard - WARNING - Se ha procesado el incidente: 20045355
+12/01/2023 09:46:43 AM - root - dgard - WARNING - Se ha procesado el incidente: 20154137
+12/01/2023 09:48:17 AM - root - dgard - WARNING - Se ha procesado el incidente: 19902608
+12/01/2023 09:49:01 AM - root - dgard - WARNING - Se ha procesado el incidente: 20244167
+12/01/2023 09:49:46 AM - root - dgard - WARNING - Se ha procesado el incidente: 20244165
+12/01/2023 09:50:35 AM - root - dgard - WARNING - Se ha procesado el incidente: 20244164
+12/01/2023 09:51:22 AM - root - dgard - WARNING - Se ha procesado el incidente: 20254086
+12/01/2023 09:52:05 AM - root - dgard - WARNING - Se ha procesado el incidente: 20254105
+12/01/2023 09:52:48 AM - root - dgard - WARNING - Se ha procesado el incidente: 20254058
+12/01/2023 09:53:33 AM - root - dgard - WARNING - Se ha procesado el incidente: 19119179
+12/01/2023 09:54:21 AM - root - dgard - WARNING - Se ha procesado el incidente: 20293597
+12/01/2023 09:55:04 AM - root - dgard - WARNING - Se ha procesado el incidente: 20293831
+12/01/2023 09:56:38 AM - root - dgard - WARNING - Se ha procesado el incidente: 20293742
+12/01/2023 09:57:22 AM - root - dgard - WARNING - Se ha procesado el incidente: 20293477
+12/01/2023 09:58:10 AM - root - dgard - WARNING - Se ha procesado el incidente: 20293817
+12/01/2023 09:58:54 AM - root - dgard - WARNING - Se ha procesado el incidente: 20293615
+12/01/2023 09:59:37 AM - root - dgard - WARNING - Se ha procesado el incidente: 20309692
+12/01/2023 10:01:28 AM - root - dgard - WARNING - Se ha procesado el incidente: 20309672
+12/01/2023 10:02:11 AM - root - dgard - WARNING - Se ha procesado el incidente: 20309654
+12/01/2023 10:02:55 AM - root - dgard - WARNING - Se ha procesado el incidente: 20145366
+12/01/2023 10:03:42 AM - root - dgard - WARNING - Se ha procesado el incidente: 20145410
+12/01/2023 10:04:24 AM - root - dgard - WARNING - Se ha procesado el incidente: 20332753
+12/01/2023 10:05:57 AM - root - dgard - WARNING - Se ha procesado el incidente: 20145420
+12/01/2023 10:07:48 AM - root - dgard - WARNING - Se ha procesado el incidente: 20332754
+12/01/2023 10:09:23 AM - root - dgard - WARNING - Se ha procesado el incidente: 20367276
+12/01/2023 10:09:59 AM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+12/01/2023 10:12:19 AM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+12/01/2023 10:42:06 AM - root - dgard - WARNING - Error Occurred: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED.
+12/01/2023 10:42:06 AM - root - dgard - WARNING - Error Occurred v2 (e_type): <class 'pyautogui.FailSafeException'>
+12/01/2023 10:42:06 AM - root - dgard - WARNING - Error Occurred v2 (e_object): PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED.
+12/01/2023 10:42:06 AM - root - dgard - WARNING - Error Occurred v2 (e_traceback): <traceback object at 0x0000019909542340>
+12/01/2023 10:42:06 AM - root - dgard - WARNING - Error Occurred v2 (e_line_number): 139

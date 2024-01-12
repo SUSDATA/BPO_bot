@@ -1,0 +1,37 @@
+01/10/2024 01:14:50 AM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE USUARIO 
+01/10/2024 01:14:50 AM - root - dgard - WARNING - 2536 registros en base fuente
+01/10/2024 01:14:50 AM - root - dgard - WARNING - Extract Data Process Finished
+01/10/2024 01:14:50 AM - root - dgard - WARNING - Opening APPs Process finished has finished
+01/10/2024 01:14:50 AM - root - dgard - WARNING - -------------------------------
+01/10/2024 01:15:33 AM - root - dgard - WARNING - Se ha procesado el incidente: 18449779
+01/10/2024 01:16:17 AM - root - dgard - WARNING - Se ha procesado el incidente: 18450347
+01/10/2024 01:17:00 AM - root - dgard - WARNING - Se ha procesado el incidente: 18449889
+01/10/2024 01:17:43 AM - root - dgard - WARNING - Se ha procesado el incidente: 18449868
+01/10/2024 01:18:28 AM - root - dgard - WARNING - Se ha procesado el incidente: 20442127
+01/10/2024 01:18:44 AM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+01/10/2024 01:19:28 AM - root - dgard - WARNING - Se ha procesado el incidente: 20198315
+01/10/2024 01:20:12 AM - root - dgard - WARNING - Se ha procesado el incidente: 20197991
+01/10/2024 01:20:52 AM - root - dgard - WARNING - Se ha procesado el incidente: 20198348
+01/10/2024 01:21:31 AM - root - dgard - WARNING - Se ha procesado el incidente: 20198300
+01/10/2024 01:22:11 AM - root - dgard - WARNING - Se ha procesado el incidente: 20198195
+01/10/2024 01:22:49 AM - root - dgard - WARNING - Se ha procesado el incidente: 20198132
+01/10/2024 01:23:29 AM - root - dgard - WARNING - Se ha procesado el incidente: 20197979
+01/10/2024 01:24:13 AM - root - dgard - WARNING - Se ha procesado el incidente: 20198001
+01/10/2024 01:24:52 AM - root - dgard - WARNING - Se ha procesado el incidente: 20198290
+01/10/2024 01:25:32 AM - root - dgard - WARNING - Se ha procesado el incidente: 20198342
+01/10/2024 01:26:12 AM - root - dgard - WARNING - Se ha procesado el incidente: 20198172
+01/10/2024 01:26:51 AM - root - dgard - WARNING - Se ha procesado el incidente: 20197973
+01/10/2024 01:27:31 AM - root - dgard - WARNING - Se ha procesado el incidente: 20198021
+01/10/2024 01:28:10 AM - root - dgard - WARNING - Se ha procesado el incidente: 20198285
+01/10/2024 01:28:50 AM - root - dgard - WARNING - Se ha procesado el incidente: 20198043
+01/10/2024 01:29:29 AM - root - dgard - WARNING - Se ha procesado el incidente: 20198260
+01/10/2024 01:30:09 AM - root - dgard - WARNING - Se ha procesado el incidente: 20198148
+01/10/2024 01:30:48 AM - root - dgard - WARNING - Se ha procesado el incidente: 20198273
+01/10/2024 01:31:28 AM - root - dgard - WARNING - Se ha procesado el incidente: 20198205
+01/10/2024 01:32:08 AM - root - dgard - WARNING - Se ha procesado el incidente: 20198177
+01/10/2024 01:32:48 AM - root - dgard - WARNING - Se ha procesado el incidente: 20198037
+01/10/2024 01:46:40 AM - root - dgard - WARNING - Error Occurred: list index out of range
+01/10/2024 01:46:40 AM - root - dgard - WARNING - Error Occurred v2 (e_type): <class 'IndexError'>
+01/10/2024 01:46:40 AM - root - dgard - WARNING - Error Occurred v2 (e_object): list index out of range
+01/10/2024 01:46:40 AM - root - dgard - WARNING - Error Occurred v2 (e_traceback): <traceback object at 0x000001CF1A38A1C0>
+01/10/2024 01:46:40 AM - root - dgard - WARNING - Error Occurred v2 (e_line_number): 145

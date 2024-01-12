@@ -1,0 +1,64 @@
+11/30/2023 01:30:36 AM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE FECHAS 
+11/30/2023 01:30:36 AM - root - dgard - WARNING - 530 registros en base fuente
+11/30/2023 01:30:36 AM - root - dgard - WARNING - Extract Data Process Finished
+11/30/2023 01:30:36 AM - root - dgard - WARNING - -------------------------------
+11/30/2023 01:31:03 AM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+11/30/2023 01:31:33 AM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+11/30/2023 01:49:04 AM - root - dgard - WARNING - Se ha procesado el incidente: 19359839
+11/30/2023 01:49:36 AM - root - dgard - WARNING - Se ha procesado el incidente: 19359840
+11/30/2023 01:50:04 AM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+11/30/2023 01:50:33 AM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+11/30/2023 01:51:03 AM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+11/30/2023 01:51:34 AM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+11/30/2023 01:52:04 AM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+11/30/2023 01:52:34 AM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+11/30/2023 01:53:50 AM - root - dgard - WARNING - Se ha procesado el incidente: 19804267
+11/30/2023 01:54:22 AM - root - dgard - WARNING - Se ha procesado el incidente: 19804283
+11/30/2023 01:54:55 AM - root - dgard - WARNING - Se ha procesado el incidente: 19804324
+11/30/2023 01:55:26 AM - root - dgard - WARNING - Se ha procesado el incidente: 19804336
+11/30/2023 01:55:58 AM - root - dgard - WARNING - Se ha procesado el incidente: 19804287
+11/30/2023 01:56:31 AM - root - dgard - WARNING - Se ha procesado el incidente: 19804305
+11/30/2023 01:57:05 AM - root - dgard - WARNING - Se ha procesado el incidente: 19316445
+11/30/2023 01:57:39 AM - root - dgard - WARNING - Se ha procesado el incidente: 19316221
+11/30/2023 01:58:14 AM - root - dgard - WARNING - Se ha procesado el incidente: 19316532
+11/30/2023 01:58:27 AM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+11/30/2023 01:59:45 AM - root - dgard - WARNING - Se ha procesado el incidente: 19606116
+11/30/2023 02:01:23 AM - root - dgard - WARNING - Se ha procesado el incidente: 19606135
+11/30/2023 02:02:00 AM - root - dgard - WARNING - Se ha procesado el incidente: 19631462
+11/30/2023 02:02:33 AM - root - dgard - WARNING - Se ha procesado el incidente: 19316250
+11/30/2023 02:03:08 AM - root - dgard - WARNING - Se ha procesado el incidente: 19316242
+11/30/2023 02:03:42 AM - root - dgard - WARNING - Se ha procesado el incidente: 19316605
+11/30/2023 02:04:16 AM - root - dgard - WARNING - Se ha procesado el incidente: 19316486
+11/30/2023 02:04:47 AM - root - dgard - WARNING - Se ha procesado el incidente: 19377963
+11/30/2023 02:05:18 AM - root - dgard - WARNING - Se ha procesado el incidente: 19378008
+11/30/2023 02:05:49 AM - root - dgard - WARNING - Se ha procesado el incidente: 19377367
+11/30/2023 02:07:02 AM - root - dgard - WARNING - Se ha procesado el incidente: 19376613
+11/30/2023 02:07:33 AM - root - dgard - WARNING - Se ha procesado el incidente: 19376412
+11/30/2023 02:08:04 AM - root - dgard - WARNING - Se ha procesado el incidente: 19376491
+11/30/2023 02:08:35 AM - root - dgard - WARNING - Se ha procesado el incidente: 19377386
+11/30/2023 02:09:06 AM - root - dgard - WARNING - Se ha procesado el incidente: 19377661
+11/30/2023 02:09:37 AM - root - dgard - WARNING - Se ha procesado el incidente: 19376531
+11/30/2023 02:10:07 AM - root - dgard - WARNING - Se ha procesado el incidente: 19377997
+11/30/2023 02:10:38 AM - root - dgard - WARNING - Se ha procesado el incidente: 19377893
+11/30/2023 02:11:09 AM - root - dgard - WARNING - Se ha procesado el incidente: 20435514
+11/30/2023 02:11:40 AM - root - dgard - WARNING - Se ha procesado el incidente: 20435481
+11/30/2023 02:12:56 AM - root - dgard - WARNING - Se ha procesado el incidente: 20435417
+11/30/2023 02:13:27 AM - root - dgard - WARNING - Se ha procesado el incidente: 20435384
+11/30/2023 02:13:57 AM - root - dgard - WARNING - Se ha procesado el incidente: 20435348
+11/30/2023 02:14:29 AM - root - dgard - WARNING - Se ha procesado el incidente: 20435222
+11/30/2023 02:14:59 AM - root - dgard - WARNING - Se ha procesado el incidente: 20435210
+11/30/2023 02:15:30 AM - root - dgard - WARNING - Se ha procesado el incidente: 20435175
+11/30/2023 02:15:58 AM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+11/30/2023 02:16:32 AM - root - dgard - WARNING - Se ha procesado el incidente: 19375461
+11/30/2023 02:17:00 AM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+11/30/2023 02:17:30 AM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+11/30/2023 02:18:43 AM - root - dgard - WARNING - Se ha procesado el incidente: 19378026
+11/30/2023 02:19:14 AM - root - dgard - WARNING - Se ha procesado el incidente: 19378019
+11/30/2023 02:19:45 AM - root - dgard - WARNING - Se ha procesado el incidente: 19377935
+11/30/2023 02:20:12 AM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+11/30/2023 02:20:46 AM - root - dgard - WARNING - Se ha procesado el incidente: 19366950
+11/30/2023 02:21:18 AM - root - dgard - WARNING - Se ha procesado el incidente: 19377979
+11/30/2023 02:21:49 AM - root - dgard - WARNING - Se ha procesado el incidente: 19375543
+11/30/2023 02:22:17 AM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+11/30/2023 02:22:47 AM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+11/30/2023 02:23:17 AM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM

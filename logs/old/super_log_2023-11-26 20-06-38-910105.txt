@@ -1,0 +1,6 @@
+11/26/2023 08:06:29 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE ESTADO (Flujo Instalación - pase a entrega final) 
+11/26/2023 08:06:29 PM - root - dgard - WARNING - 90 registros en base fuente
+11/26/2023 08:06:29 PM - root - dgard - WARNING - Extract Data Process Finished
+11/26/2023 08:06:29 PM - root - dgard - WARNING - -------------------------------
+11/26/2023 08:06:38 PM - root - dgard - WARNING - Error Occurred: cannot access local variable 'crm_ot_blocked_message' where it is not associated with a value
+11/26/2023 08:06:38 PM - root - dgard - WARNING - Error Occurred v2: <class 'UnboundLocalError'>

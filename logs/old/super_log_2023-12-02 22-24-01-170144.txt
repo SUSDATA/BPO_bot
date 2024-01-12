@@ -1,0 +1,13 @@
+12/02/2023 10:01:52 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE FECHAS 
+12/02/2023 10:01:52 PM - root - dgard - WARNING - 530 registros en base fuente
+12/02/2023 10:01:52 PM - root - dgard - WARNING - Extract Data Process Finished
+12/02/2023 10:01:52 PM - root - dgard - WARNING - -------------------------------
+12/02/2023 10:02:51 PM - root - dgard - WARNING - Se ha procesado el incidente: 20372583
+12/02/2023 10:03:50 PM - root - dgard - WARNING - Se ha procesado el incidente: 20437388
+12/02/2023 10:04:27 PM - root - dgard - WARNING - Se ha procesado el incidente: 20437355
+12/02/2023 10:04:56 PM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM
+12/02/2023 10:24:01 PM - root - dgard - WARNING - Error Occurred: screen grab failed
+12/02/2023 10:24:01 PM - root - dgard - WARNING - Error Occurred v2 (e_type): <class 'OSError'>
+12/02/2023 10:24:01 PM - root - dgard - WARNING - Error Occurred v2 (e_object): screen grab failed
+12/02/2023 10:24:01 PM - root - dgard - WARNING - Error Occurred v2 (e_traceback): <traceback object at 0x000001776BB9D440>
+12/02/2023 10:24:01 PM - root - dgard - WARNING - Error Occurred v2 (e_line_number): 139

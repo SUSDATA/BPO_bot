@@ -1,0 +1,6 @@
+11/27/2023 09:10:59 AM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE ESTADO (Flujo Instalación - pase a entrega final) 
+11/27/2023 09:10:59 AM - root - dgard - WARNING - 0 registros en base fuente
+11/27/2023 09:10:59 AM - root - dgard - WARNING - Extract Data Process Finished
+11/27/2023 09:10:59 AM - root - dgard - WARNING - -------------------------------
+11/27/2023 09:10:59 AM - root - dgard - WARNING - -------------------------------
+11/27/2023 09:11:02 AM - root - dgard - WARNING - Main Function finished naturally

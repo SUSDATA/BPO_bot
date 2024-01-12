@@ -1,4 +1,5 @@
 import subprocess
+import pyperclip
 import pyautogui
 from genericfunctions import (pressingKey,make_window_visible)
 from time import sleep
@@ -41,8 +42,10 @@ def connectToCRM():
     sleep(1)
     pyautogui.write('EC5708D')
     sleep(1)
-    pressingKey('tab')
-    pyautogui.write('Django25//')
+    pressingKey('tab') 
+    pyperclip.copy('Blondi24++')
+    sleep(0.5)
+    pyautogui.hotkey('ctrl','v')
     sleep(1)
     pressingKey('tab')
     sleep(2)

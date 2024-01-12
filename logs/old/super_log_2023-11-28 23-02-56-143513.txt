@@ -1,0 +1,9 @@
+11/28/2023 11:02:56 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE ESTADO (Flujo Instalación - pase a entrega final) 
+11/28/2023 11:02:56 PM - root - dgard - WARNING - 737 registros en base fuente
+11/28/2023 11:02:56 PM - root - dgard - WARNING - Extract Data Process Finished
+11/28/2023 11:02:56 PM - root - dgard - WARNING - -------------------------------
+11/28/2023 11:02:56 PM - root - dgard - WARNING - Error Occurred: tuple index out of range
+11/28/2023 11:02:56 PM - root - dgard - WARNING - Error Occurred v2 (e_type): <class 'IndexError'>
+11/28/2023 11:02:56 PM - root - dgard - WARNING - Error Occurred v2 (e_object): tuple index out of range
+11/28/2023 11:02:56 PM - root - dgard - WARNING - Error Occurred v2 (e_traceback): <traceback object at 0x000001B7A1BCBE40>
+11/28/2023 11:02:56 PM - root - dgard - WARNING - Error Occurred v2 (e_line_number): 152

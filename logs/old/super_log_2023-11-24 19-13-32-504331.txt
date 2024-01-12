@@ -1,0 +1,4 @@
+11/24/2023 07:13:11 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE FECHAS 
+11/24/2023 07:13:12 PM - root - dgard - WARNING - 1055 registros en base fuente
+11/24/2023 07:13:12 PM - root - dgard - WARNING - Extract Data Process Finished
+11/24/2023 07:13:12 PM - root - dgard - WARNING - -------------------------------

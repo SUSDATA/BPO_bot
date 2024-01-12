@@ -1,0 +1,9 @@
+12/17/2023 11:51:52 AM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE ESTADO (Flujo Instalación - pase a entrega final) 
+12/17/2023 11:51:52 AM - root - dgard - WARNING - 105 registros en base fuente
+12/17/2023 11:51:52 AM - root - dgard - WARNING - Extract Data Process Finished
+12/17/2023 11:51:52 AM - root - dgard - WARNING - -------------------------------
+12/17/2023 11:51:56 AM - root - dgard - WARNING - Error Occurred: list index out of range
+12/17/2023 11:51:56 AM - root - dgard - WARNING - Error Occurred v2 (e_type): <class 'IndexError'>
+12/17/2023 11:51:56 AM - root - dgard - WARNING - Error Occurred v2 (e_object): list index out of range
+12/17/2023 11:51:56 AM - root - dgard - WARNING - Error Occurred v2 (e_traceback): <traceback object at 0x000002759F46CA00>
+12/17/2023 11:51:56 AM - root - dgard - WARNING - Error Occurred v2 (e_line_number): 151

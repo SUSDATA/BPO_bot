@@ -1,0 +1,30 @@
+01/10/2024 05:56:45 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE USUARIO 
+01/10/2024 05:56:46 PM - root - dgard - WARNING - 2536 registros en base fuente
+01/10/2024 05:56:46 PM - root - dgard - WARNING - Extract Data Process Finished
+01/10/2024 05:56:46 PM - root - dgard - WARNING - Opening APPs Process finished has finished
+01/10/2024 05:56:46 PM - root - dgard - WARNING - -------------------------------
+01/10/2024 05:57:31 PM - root - dgard - WARNING - Se ha procesado el incidente: 20359738
+01/10/2024 05:58:18 PM - root - dgard - WARNING - Se ha procesado el incidente: 20359686
+01/10/2024 05:59:03 PM - root - dgard - WARNING - Se ha procesado el incidente: 20360140
+01/10/2024 05:59:48 PM - root - dgard - WARNING - Se ha procesado el incidente: 20359453
+01/10/2024 06:00:34 PM - root - dgard - WARNING - Se ha procesado el incidente: 20361139
+01/10/2024 06:01:18 PM - root - dgard - WARNING - Se ha procesado el incidente: 20359502
+01/10/2024 06:02:05 PM - root - dgard - WARNING - Se ha procesado el incidente: 20361092
+01/10/2024 06:02:50 PM - root - dgard - WARNING - Se ha procesado el incidente: 20361181
+01/10/2024 06:03:36 PM - root - dgard - WARNING - Se ha procesado el incidente: 20361161
+01/10/2024 06:04:21 PM - root - dgard - WARNING - Se ha procesado el incidente: 20359532
+01/10/2024 06:05:06 PM - root - dgard - WARNING - Se ha procesado el incidente: 20359726
+01/10/2024 06:05:51 PM - root - dgard - WARNING - Se ha procesado el incidente: 20359777
+01/10/2024 06:06:36 PM - root - dgard - WARNING - Se ha procesado el incidente: 20359570
+01/10/2024 06:07:22 PM - root - dgard - WARNING - Se ha procesado el incidente: 20359479
+01/10/2024 06:08:07 PM - root - dgard - WARNING - Se ha procesado el incidente: 20359538
+01/10/2024 06:08:53 PM - root - dgard - WARNING - Se ha procesado el incidente: 20359543
+01/10/2024 06:09:38 PM - root - dgard - WARNING - Se ha procesado el incidente: 20359664
+01/10/2024 06:10:24 PM - root - dgard - WARNING - Se ha procesado el incidente: 20361149
+01/10/2024 06:11:09 PM - root - dgard - WARNING - Se ha procesado el incidente: 20359718
+01/10/2024 06:11:54 PM - root - dgard - WARNING - Se ha procesado el incidente: 20359508
+01/10/2024 06:12:39 PM - root - dgard - WARNING - Se ha procesado el incidente: 20361060
+01/10/2024 06:13:24 PM - root - dgard - WARNING - Se ha procesado el incidente: 20359744
+01/10/2024 06:14:11 PM - root - dgard - WARNING - Se ha procesado el incidente: 20361048
+01/10/2024 06:14:56 PM - root - dgard - WARNING - Se ha procesado el incidente: 20359397
+01/10/2024 06:15:41 PM - root - dgard - WARNING - Se ha procesado el incidente: 20359654

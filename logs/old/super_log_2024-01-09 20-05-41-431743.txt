@@ -1,0 +1,34 @@
+01/09/2024 07:51:48 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE USUARIO 
+01/09/2024 07:51:48 PM - root - dgard - WARNING - 2536 registros en base fuente
+01/09/2024 07:51:48 PM - root - dgard - WARNING - Extract Data Process Finished
+01/09/2024 07:51:48 PM - root - dgard - WARNING - Opening APPs Process finished has finished
+01/09/2024 07:51:48 PM - root - dgard - WARNING - -------------------------------
+01/09/2024 07:52:20 PM - root - dgard - WARNING - Se ha procesado el incidente: 19346207
+01/09/2024 07:52:53 PM - root - dgard - WARNING - Se ha procesado el incidente: 19344444
+01/09/2024 07:53:26 PM - root - dgard - WARNING - Se ha procesado el incidente: 19961596
+01/09/2024 07:53:59 PM - root - dgard - WARNING - Se ha procesado el incidente: 19961504
+01/09/2024 07:54:31 PM - root - dgard - WARNING - Se ha procesado el incidente: 19343348
+01/09/2024 07:55:04 PM - root - dgard - WARNING - Se ha procesado el incidente: 19959583
+01/09/2024 07:55:36 PM - root - dgard - WARNING - Se ha procesado el incidente: 19963425
+01/09/2024 07:56:12 PM - root - dgard - WARNING - Se ha procesado el incidente: 20549064
+01/09/2024 07:56:45 PM - root - dgard - WARNING - Se ha procesado el incidente: 20549021
+01/09/2024 07:57:21 PM - root - dgard - WARNING - Se ha procesado el incidente: 20548685
+01/09/2024 07:57:55 PM - root - dgard - WARNING - Se ha procesado el incidente: 20548502
+01/09/2024 07:58:28 PM - root - dgard - WARNING - Se ha procesado el incidente: 20548626
+01/09/2024 07:59:00 PM - root - dgard - WARNING - Se ha procesado el incidente: 20549001
+01/09/2024 07:59:36 PM - root - dgard - WARNING - Se ha procesado el incidente: 20548892
+01/09/2024 08:00:09 PM - root - dgard - WARNING - Se ha procesado el incidente: 20548470
+01/09/2024 08:00:42 PM - root - dgard - WARNING - Se ha procesado el incidente: 20548973
+01/09/2024 08:01:14 PM - root - dgard - WARNING - Se ha procesado el incidente: 20548870
+01/09/2024 08:01:47 PM - root - dgard - WARNING - Se ha procesado el incidente: 20548614
+01/09/2024 08:02:20 PM - root - dgard - WARNING - Se ha procesado el incidente: 20548543
+01/09/2024 08:02:54 PM - root - dgard - WARNING - Se ha procesado el incidente: 20548453
+01/09/2024 08:03:27 PM - root - dgard - WARNING - Se ha procesado el incidente: 20548928
+01/09/2024 08:04:03 PM - root - dgard - WARNING - Se ha procesado el incidente: 20548646
+01/09/2024 08:04:36 PM - root - dgard - WARNING - Se ha procesado el incidente: 20548699
+01/09/2024 08:05:09 PM - root - dgard - WARNING - Se ha procesado el incidente: 20549011
+01/09/2024 08:05:41 PM - root - dgard - WARNING - Error Occurred: screen grab failed
+01/09/2024 08:05:41 PM - root - dgard - WARNING - Error Occurred v2 (e_type): <class 'OSError'>
+01/09/2024 08:05:41 PM - root - dgard - WARNING - Error Occurred v2 (e_object): screen grab failed
+01/09/2024 08:05:41 PM - root - dgard - WARNING - Error Occurred v2 (e_traceback): <traceback object at 0x000001F23D7DA4C0>
+01/09/2024 08:05:41 PM - root - dgard - WARNING - Error Occurred v2 (e_line_number): 145

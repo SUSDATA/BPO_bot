@@ -1,0 +1,20 @@
+12/28/2023 08:25:26 AM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE FECHAS 
+12/28/2023 08:25:26 AM - root - dgard - WARNING - 467 registros en base fuente
+12/28/2023 08:25:26 AM - root - dgard - WARNING - Extract Data Process Finished
+12/28/2023 08:25:26 AM - root - dgard - WARNING - Opening APPs Process finished has finished
+12/28/2023 08:25:26 AM - root - dgard - WARNING - -------------------------------
+12/28/2023 08:26:07 AM - root - dgard - WARNING - Se ha procesado el incidente: 19959213
+12/28/2023 08:26:47 AM - root - dgard - WARNING - Se ha procesado el incidente: 19959273
+12/28/2023 08:27:25 AM - root - dgard - WARNING - Se ha procesado el incidente: 19959487
+12/28/2023 08:28:04 AM - root - dgard - WARNING - Se ha procesado el incidente: 19959497
+12/28/2023 08:28:43 AM - root - dgard - WARNING - Se ha procesado el incidente: 19959583
+12/28/2023 08:29:23 AM - root - dgard - WARNING - Se ha procesado el incidente: 19959827
+12/28/2023 08:30:07 AM - root - dgard - WARNING - Se ha procesado el incidente: 19959931
+12/28/2023 08:30:44 AM - root - dgard - WARNING - Se ha procesado el incidente: 19960356
+12/28/2023 08:31:23 AM - root - dgard - WARNING - Se ha procesado el incidente: 19960864
+12/28/2023 08:32:01 AM - root - dgard - WARNING - Se ha procesado el incidente: 19960876
+12/28/2023 08:32:10 AM - root - dgard - WARNING - Error Occurred: name 'activeWindowTitle' is not defined
+12/28/2023 08:32:10 AM - root - dgard - WARNING - Error Occurred v2 (e_type): <class 'NameError'>
+12/28/2023 08:32:10 AM - root - dgard - WARNING - Error Occurred v2 (e_object): name 'activeWindowTitle' is not defined
+12/28/2023 08:32:10 AM - root - dgard - WARNING - Error Occurred v2 (e_traceback): <traceback object at 0x00000170E888DF40>
+12/28/2023 08:32:10 AM - root - dgard - WARNING - Error Occurred v2 (e_line_number): 180

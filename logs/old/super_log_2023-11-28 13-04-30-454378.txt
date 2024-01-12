@@ -1,0 +1,2 @@
+11/28/2023 01:04:30 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE FECHAS 
+11/28/2023 01:04:30 PM - root - dgard - WARNING - FileNotFoundError Occurred: [Errno 2] No such file or directory: 'C:/BOT INSUMO BASE\\Input BOT 001 V1.xlsx'

@@ -1,0 +1,22 @@
+11/27/2023 11:23:57 AM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE FECHAS 
+11/27/2023 11:23:57 AM - root - dgard - WARNING - 95 registros en base fuente
+11/27/2023 11:23:57 AM - root - dgard - WARNING - Extract Data Process Finished
+11/27/2023 11:23:57 AM - root - dgard - WARNING - -------------------------------
+11/27/2023 11:24:45 AM - root - dgard - WARNING - Se ha procesado el incidente: 18341240
+11/27/2023 11:25:27 AM - root - dgard - WARNING - Se ha procesado el incidente: 18341245
+11/27/2023 11:26:06 AM - root - dgard - WARNING - Se ha procesado el incidente: 20278727
+11/27/2023 11:26:46 AM - root - dgard - WARNING - Se ha procesado el incidente: 20299056
+11/27/2023 11:27:25 AM - root - dgard - WARNING - Se ha procesado el incidente: 20298012
+11/27/2023 11:28:04 AM - root - dgard - WARNING - Se ha procesado el incidente: 20278808
+11/27/2023 11:28:45 AM - root - dgard - WARNING - Se ha procesado el incidente: 18970470
+11/27/2023 11:29:25 AM - root - dgard - WARNING - Se ha procesado el incidente: 18970583
+11/27/2023 11:30:04 AM - root - dgard - WARNING - Se ha procesado el incidente: 18970507
+11/27/2023 11:30:50 AM - root - dgard - WARNING - Se ha procesado el incidente: 18970432
+11/27/2023 11:32:17 AM - root - dgard - WARNING - Se ha procesado el incidente: 19442428
+11/27/2023 11:32:57 AM - root - dgard - WARNING - Se ha procesado el incidente: 18970607
+11/27/2023 11:33:37 AM - root - dgard - WARNING - Se ha procesado el incidente: 18458443
+11/27/2023 11:34:17 AM - root - dgard - WARNING - Se ha procesado el incidente: 18458405
+11/27/2023 11:34:59 AM - root - dgard - WARNING - Se ha procesado el incidente: 18144728
+11/27/2023 11:35:41 AM - root - dgard - WARNING - Se ha procesado el incidente: 18144861
+11/27/2023 11:36:24 AM - root - dgard - WARNING - Se ha procesado el incidente: 19496736
+11/27/2023 11:37:09 AM - root - dgard - WARNING - Se ha procesado el incidente: 19719743

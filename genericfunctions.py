@@ -30,8 +30,8 @@ def showDesktop():
     pyautogui.keyUp('win')
     pyautogui.keyUp('d')
 
-def selectToEnd(times):
-    for i in range(times):
+def selectToEnd():
+    for i in range():
         pyautogui.keyDown('shift')
         pyautogui.keyDown('fn')
         pyautogui.keyDown('end')
