@@ -1,9 +1,0 @@
-11/28/2023 11:29:02 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE FECHAS 
-11/28/2023 11:29:03 PM - root - dgard - WARNING - 737 registros en base fuente
-11/28/2023 11:29:03 PM - root - dgard - WARNING - Extract Data Process Finished
-11/28/2023 11:29:03 PM - root - dgard - WARNING - -------------------------------
-11/28/2023 11:29:06 PM - root - dgard - WARNING - Error Occurred: list index out of range
-11/28/2023 11:29:06 PM - root - dgard - WARNING - Error Occurred v2 (e_type): <class 'IndexError'>
-11/28/2023 11:29:06 PM - root - dgard - WARNING - Error Occurred v2 (e_object): list index out of range
-11/28/2023 11:29:06 PM - root - dgard - WARNING - Error Occurred v2 (e_traceback): <traceback object at 0x000002B7FA3A2BC0>
-11/28/2023 11:29:06 PM - root - dgard - WARNING - Error Occurred v2 (e_line_number): 140

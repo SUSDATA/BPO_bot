@@ -1,5 +1,0 @@
-01/05/2024 10:16:53 PM - root - dgard - WARNING - Error Occurred: 
-01/05/2024 10:16:53 PM - root - dgard - WARNING - Error Occurred v2 (e_type): <class 'EOFError'>
-01/05/2024 10:16:53 PM - root - dgard - WARNING - Error Occurred v2 (e_object): 
-01/05/2024 10:16:53 PM - root - dgard - WARNING - Error Occurred v2 (e_traceback): <traceback object at 0x0000022E3B47BB40>
-01/05/2024 10:16:53 PM - root - dgard - WARNING - Error Occurred v2 (e_line_number): 53

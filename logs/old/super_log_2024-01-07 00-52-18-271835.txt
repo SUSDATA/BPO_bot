@@ -1,6 +1,0 @@
-01/07/2024 12:52:17 AM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE FECHAS 
-01/07/2024 12:52:17 AM - root - dgard - WARNING - Error Occurred: Unknown error in HTTP implementation: SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)')
-01/07/2024 12:52:17 AM - root - dgard - WARNING - Error Occurred v2 (e_type): <class 'telegram.error.NetworkError'>
-01/07/2024 12:52:17 AM - root - dgard - WARNING - Error Occurred v2 (e_object): Unknown error in HTTP implementation: SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)')
-01/07/2024 12:52:17 AM - root - dgard - WARNING - Error Occurred v2 (e_traceback): <traceback object at 0x000002354C023F00>
-01/07/2024 12:52:17 AM - root - dgard - WARNING - Error Occurred v2 (e_line_number): 89

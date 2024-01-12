@@ -1,7 +1,0 @@
-11/24/2023 09:12:03 AM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE FECHAS 
-11/24/2023 09:12:04 AM - root - dgard - WARNING - 1055 registros en base fuente
-11/24/2023 09:12:04 AM - root - dgard - WARNING - Extract Data Process Finished
-11/24/2023 09:12:04 AM - root - dgard - WARNING - -------------------------------
-11/24/2023 09:12:40 AM - root - dgard - WARNING - Se ha procesado el incidente: 19539061
-11/24/2023 09:12:40 AM - root - dgard - WARNING - Error Occurred: [Errno 13] Permission denied: 'C:/BOT INSUMO BASE\\Input BOT 001 V1.xlsx'
-11/24/2023 09:12:40 AM - root - dgard - WARNING - Error Occurred v2: <class 'PermissionError'>

@@ -1,5 +1,0 @@
-11/28/2023 01:08:37 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE FECHAS 
-11/28/2023 01:08:37 PM - root - dgard - WARNING - 749 registros en base fuente
-11/28/2023 01:08:37 PM - root - dgard - WARNING - Extract Data Process Finished
-11/28/2023 01:08:37 PM - root - dgard - WARNING - -------------------------------
-11/28/2023 01:09:16 PM - root - dgard - WARNING - Se presenta mensaje de advertencia en el proceso en CRM

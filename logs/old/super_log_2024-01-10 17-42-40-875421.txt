@@ -1,5 +1,0 @@
-01/10/2024 05:42:37 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE USUARIO 
-01/10/2024 05:42:38 PM - root - dgard - WARNING - 2536 registros en base fuente
-01/10/2024 05:42:38 PM - root - dgard - WARNING - Extract Data Process Finished
-01/10/2024 05:42:38 PM - root - dgard - WARNING - Opening APPs Process finished has finished
-01/10/2024 05:42:38 PM - root - dgard - WARNING - -------------------------------

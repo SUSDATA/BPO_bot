@@ -1,8 +1,0 @@
-12/21/2023 10:27:10 AM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE ESTADO (Flujo Instalación - pase a entrega final) 
-12/21/2023 10:27:10 AM - root - dgard - WARNING - 159 registros en base fuente
-12/21/2023 10:27:10 AM - root - dgard - WARNING - Extract Data Process Finished
-12/21/2023 10:27:10 AM - root - dgard - WARNING - Opening APPs Process finished has finished
-12/21/2023 10:27:10 AM - root - dgard - WARNING - -------------------------------
-12/21/2023 10:28:00 AM - root - dgard - WARNING - Se ha procesado el incidente: 20511510
-12/21/2023 10:28:00 AM - root - dgard - WARNING - -------------------------------
-12/21/2023 10:28:03 AM - root - dgard - WARNING - Main Function finished naturally
