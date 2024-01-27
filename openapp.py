@@ -1,3 +1,5 @@
+import os
+from dotenv import load_dotenv
 import subprocess
 import pyperclip
 import pyautogui
@@ -40,10 +42,10 @@ def connectToCRM():
     
     pressingKey('tab',2)
     sleep(1)
-    pyautogui.write('EC5708D')
+    pyautogui.write(os.getenv('USER_CRM'))
     sleep(1)
     pressingKey('tab') 
-    pyperclip.copy('Blondi24++')
+    pyperclip.copy(os.getenv('PASS_CRM'))
     sleep(0.5)
     pyautogui.hotkey('ctrl','v')
     sleep(1)
@@ -51,11 +53,9 @@ def connectToCRM():
     sleep(2)
     pressingKey('enter')
     
-    while crm_select_app is None:
-        print("buscando ventana emergente!")
+    while crm_select_app is None:        
         crm_select_app = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/select_app.png', grayscale = True,confidence=0.9)
-    print("CRM select box is present!")
-    
+    print("CRM select box is present!")    
     pressingKey('enter')
     pressingKey('tab',4)
     pressingKey('enter')

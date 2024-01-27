@@ -1,8 +1,0 @@
-01/10/2024 04:50:49 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE USUARIO 
-01/10/2024 04:50:50 PM - root - dgard - WARNING - 2536 registros en base fuente
-01/10/2024 04:50:50 PM - root - dgard - WARNING - Extract Data Process Finished
-01/10/2024 04:50:50 PM - root - dgard - WARNING - Opening APPs Process finished has finished
-01/10/2024 04:50:50 PM - root - dgard - WARNING - -------------------------------
-01/10/2024 04:51:35 PM - root - dgard - WARNING - Se ha procesado el incidente: 20464391
-01/10/2024 04:52:20 PM - root - dgard - WARNING - Se ha procesado el incidente: 20465286
-01/10/2024 04:53:06 PM - root - dgard - WARNING - Se ha procesado el incidente: 20465198

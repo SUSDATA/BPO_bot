@@ -1,8 +1,0 @@
-01/10/2024 04:09:59 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE USUARIO 
-01/10/2024 04:10:00 PM - root - dgard - WARNING - 2536 registros en base fuente
-01/10/2024 04:10:00 PM - root - dgard - WARNING - Extract Data Process Finished
-01/10/2024 04:10:06 PM - root - dgard - WARNING - Error Occurred: argument of type 'NoneType' is not iterable
-01/10/2024 04:10:06 PM - root - dgard - WARNING - Error Occurred v2 (e_type): <class 'TypeError'>
-01/10/2024 04:10:06 PM - root - dgard - WARNING - Error Occurred v2 (e_object): argument of type 'NoneType' is not iterable
-01/10/2024 04:10:06 PM - root - dgard - WARNING - Error Occurred v2 (e_traceback): <traceback object at 0x000002076CC62640>
-01/10/2024 04:10:06 PM - root - dgard - WARNING - Error Occurred v2 (e_line_number): 120

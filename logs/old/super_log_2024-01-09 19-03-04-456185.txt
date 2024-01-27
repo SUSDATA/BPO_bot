@@ -1,6 +1,0 @@
-01/09/2024 07:00:39 PM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE USUARIO 
-01/09/2024 07:00:39 PM - root - dgard - WARNING - 2536 registros en base fuente
-01/09/2024 07:00:39 PM - root - dgard - WARNING - Extract Data Process Finished
-01/09/2024 07:00:39 PM - root - dgard - WARNING - Opening APPs Process finished has finished
-01/09/2024 07:00:39 PM - root - dgard - WARNING - -------------------------------
-01/09/2024 07:01:14 PM - root - dgard - WARNING - No Se ha procesado el incidente: 20561444

@@ -1,8 +1,0 @@
-12/17/2023 11:53:04 AM - root - dgard - WARNING - Inicio de ejecucion del BOT para CAMBIO DE ESTADO (Flujo Instalación - pase a entrega final) 
-12/17/2023 11:53:04 AM - root - dgard - WARNING - 105 registros en base fuente
-12/17/2023 11:53:04 AM - root - dgard - WARNING - Extract Data Process Finished
-12/17/2023 11:53:12 AM - root - dgard - WARNING - Error Occurred: argument of type 'NoneType' is not iterable
-12/17/2023 11:53:12 AM - root - dgard - WARNING - Error Occurred v2 (e_type): <class 'TypeError'>
-12/17/2023 11:53:12 AM - root - dgard - WARNING - Error Occurred v2 (e_object): argument of type 'NoneType' is not iterable
-12/17/2023 11:53:12 AM - root - dgard - WARNING - Error Occurred v2 (e_traceback): <traceback object at 0x00000269E68A1E80>
-12/17/2023 11:53:12 AM - root - dgard - WARNING - Error Occurred v2 (e_line_number): 118

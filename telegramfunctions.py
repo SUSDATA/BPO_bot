@@ -23,7 +23,7 @@ async def sendTelegramMsgWithDocuments(chat_id):
 #     async with bot:
 #         #print((await bot.get_updates())[4])
 #         #5970685607 personal chat ID
-#         await bot.send_message(text='Hola bienvenidos a las notificaciones RPA para el BPO!', chat_id=-1002019721248)
+#         await bot.send_message(text='Hola bienvenidos a las notificaciones BOT para el BPO!', chat_id=-1002019721248)
 #         #print(await bot.get_me())
 
 # if __name__ == '__main__':
