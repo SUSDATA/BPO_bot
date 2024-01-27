@@ -275,8 +275,8 @@ def searchAndUpdateDates(incidentId,fechaProgramacion,fechaCompromiso,anotacione
     
     #/////////////////////////////////// ACTUALIZACION DE FECHAS /////////////////////////////////////  
     # move to specific area
-    
     pyautogui.moveRel(250,0)
+    
     # CAMBIO DE FECHA DE PROGRAMACION                
     while fecha_programacion_field is None and fecha_programacion_field_2 is None and crmAttempts < 250:
         print("buscando fecha_programacion_field in screen")
