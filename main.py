@@ -66,11 +66,9 @@ async def main():
         if 'Input Backup' in wb.sheetnames:
             del wb['Input Backup']
         
-        # Notify the start of BOT execution via Telegram        
-        
+        # Notify the start of BOT execution via Telegram                
         #await sendTelegramMsg('START - BOT ' + actividad_rpa_selected + ' ha iniciado.\nUsuario ['+ get_username_os() +']\nTiempo de Inicio: ' + getCurrentDateAndTime(),TELEGRAM_CHAT_ID)
-        #await sendTelegramMsgWithDocuments(TELEGRAM_CHAT_ID)
-        
+        #await sendTelegramMsgWithDocuments(TELEGRAM_CHAT_ID)        
         # # Notify the start of BOT execution via Email         
         # sendEmail(
         #     'START - BOT ' + actividad_rpa_selected + ' ha iniciado',
@@ -223,8 +221,7 @@ async def main():
         #     f = open("C:/BOT BPO Automation/Version 1.0/logs/super_log.txt")
         #     f.close()
         # else:
-        #     print("File Exists") 
-        
+        #     print("File Exists")         
         # shutil.copyfile('C:/BOT BPO Automation/Version 1.0/logs/super_log.txt', 'C:/BOT BPO Automation/Version 1.0/logs/old/super_log_'+ str(datetime.now()).translate(str.maketrans({':': '-', '.': '-'}))+ '.txt')
         # sleep(1)
         make_noise()     
