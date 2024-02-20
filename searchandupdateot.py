@@ -220,7 +220,7 @@ def searchAndUpdateDates(incidentId,fechaProgramacion,fechaCompromiso,anotacione
     sleep(0.5)
     pressingKey('enter')
     
-    #/////////////////////////////////// FASE DE ADVERTENCIAS ///////////////////////////////////////////
+    #/////////////////////////////////// FASE DE ADVERTENCIAS ////////////////////////////////////////
     
     while crm_ot_blocked_message is None and crm_warning_message is None and crmAttempts < 10:
         crm_warning_message = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/mensaje_advertencia.png', grayscale = True,confidence=0.9)   
@@ -270,7 +270,7 @@ def searchAndUpdateDates(incidentId,fechaProgramacion,fechaCompromiso,anotacione
     print("CRM Edit view Window was maximized!")
     
     # Click on open Details Button on the CRM to make date fields visible    
-    pyautogui.click(24,617)
+    pyautogui.click(19,494)
     crmAttempts = 0
     
     #/////////////////////////////////// ACTUALIZACION DE FECHAS /////////////////////////////////////  
@@ -281,8 +281,7 @@ def searchAndUpdateDates(incidentId,fechaProgramacion,fechaCompromiso,anotacione
     while fecha_programacion_field is None and fecha_programacion_field_2 is None and crmAttempts < 250:
         print("buscando fecha_programacion_field in screen")
         print("crmAttempts: ",crmAttempts)
-        fecha_programacion_field = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/fecha_programacion_field.png', grayscale = True,confidence=0.95)        
-        fecha_programacion_field_2 = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/fecha_programacion_field_2.png', grayscale = True,confidence=0.95)                    
+        fecha_programacion_field = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/fecha_programacion_field.png', grayscale = True,confidence=0.95)
         if crmAttempts % 5  == 0 and crmAttempts > 20:
             pyautogui.scroll(-35)        
         crmAttempts = crmAttempts + 1 
@@ -341,7 +340,7 @@ def searchAndUpdateDates(incidentId,fechaProgramacion,fechaCompromiso,anotacione
         pyautogui.hotkey('ctrl','v')    
         sleep(0.5)
     
-    #/////////////////////////////////// CLOSING PHASE /////////////////////////////////////    
+    #/////////////////////////////////// CLOSING PHASE /////////////////////////////////////
     
     while crm_save_incident is None:
         crm_save_incident = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/guardar_incidente_button.png', grayscale = True,confidence=0.9)   

@@ -1,3 +1,4 @@
+import pyautogui
 from dotenv import load_dotenv
 import shutil
 import asyncio
@@ -25,9 +26,13 @@ def reset_crm():
 
 async def main():       
 
+    #Chequea coordenadas (X,Y) en la pantalla
+    # while True:
+    #     print(pyautogui.position())
+
     # VARIABLES DE ENTORNO
     load_dotenv()        
-    TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID') # PERSONAL CHAT WITH BOT 5970685607 # TELEGRAM CHAT GROUP ID #-1002019721248
+    TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID') # PERSONAL CHAT WITH BOT 5970685607 # TELEGRAM CHAT GROUP ID #-1002019721248    
     INPUT_DIRECTORY = os.getenv('INPUT_DIRECTORY')
     INPUT_FILENAME = os.getenv('INPUT_FILENAME')
     #SUPER_LOG_FILENAME = 'C:/BOT BPO Automation/Version 1.0/logs/super_log.txt'
@@ -67,12 +72,12 @@ async def main():
             del wb['Input Backup']
         
         # Notify the start of BOT execution via Telegram                
-        #await sendTelegramMsg('START - BOT ' + actividad_rpa_selected + ' ha iniciado.\nUsuario ['+ get_username_os() +']\nTiempo de Inicio: ' + getCurrentDateAndTime(),TELEGRAM_CHAT_ID)
+        await sendTelegramMsg('START - BOT ha iniciado.\nUsuario ['+ get_username_os() +']\nTiempo de Inicio: ' + getCurrentDateAndTime(),TELEGRAM_CHAT_ID)
         #await sendTelegramMsgWithDocuments(TELEGRAM_CHAT_ID)        
         # # Notify the start of BOT execution via Email         
         # sendEmail(
         #     'START - BOT ' + actividad_rpa_selected + ' ha iniciado',
-        #     CORREOS_DESTINO,
+        #     CORREOS_DESTINO,  EC5708D
         #     CORREOS_CC,
         #     'START - BOT ' + actividad_rpa_selected + ' ha sido iniciado por el usuario ['+ get_username_os() +'] a las: ' + getCurrentDateAndTime(),
         #     'C:\\BOT INSUMO BASE\\Input BOT 001 V1.xlsx',
@@ -196,7 +201,7 @@ async def main():
         #***************************************#
         closeCRM()
         sleep(1)
-        showDesktop()                            
+        showDesktop()
 
         #***************************************#
         #*********** SEND NOTIFICATIONS  *******#
@@ -205,7 +210,7 @@ async def main():
         #logging.warning('Main Function finished naturally',extra=attrs)
         #await sendTelegramMsg('END - BOT '+actividad_rpa_selected+' ha finalizado.\n' + 'Usuario ['+ get_username_os() +']\nTiempo de finalización:'+ getCurrentDateAndTime(),TELEGRAM_CHAT_ID)
         await sendTelegramMsg('END - BOT '+' ha finalizado.\n' + 'Usuario ['+ get_username_os() +']\nTiempo de finalización:'+ getCurrentDateAndTime(),TELEGRAM_CHAT_ID)
-        await sendTelegramMsgWithDocuments(TELEGRAM_CHAT_ID)        
+        #await sendTelegramMsgWithDocuments(TELEGRAM_CHAT_ID)        
         # sendEmail(
         #     'END - BOT '+ actividad_rpa_selected +' ha finalizado',
         #     CORREOS_DESTINO,

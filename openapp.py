@@ -27,14 +27,33 @@ def openAndConnectVPNForticlient():
 
 # Open CRM Onyx App
 def openCRM():    
+    crm_login_app = crm_login_app_2 = None
+    crmAttempts = 0
+
     sleep(1)
     pressingKey('win')
     sleep(1)
-    pyautogui.write('Nuevo CRM')    
+    pyautogui.write('Nuevo CRM')
     sleep(1)
     pressingKey('enter')
-    make_window_visible('Control de Acceso Unificado CRM')
-    
+   
+    # while crm_login is None:
+    #     crm_login = pyautogui.locateOnScreen('C:/RPA BPO Automation/Version 1.0/assets/crm_login_window.png', grayscale = True,confidence=0.9)    
+    # print("CRM Login GUI is present!")
+
+    #pyautogui.click(906,743)
+    while crm_login_app is None and crm_login_app_2 is None:        
+        crm_login_app = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/crm_login_window.png', grayscale = True,confidence=0.9)
+        crm_login_app_2 = pyautogui.locateOnScreen('C:/BOT BPO Automation/Version 1.0/assets/crm_login_window_v2.png', grayscale = True,confidence=0.9)
+        sleep(0.6)
+        print("buscando crm login window")
+        if crmAttempts == 5:
+            pyautogui.getWindowsWithTitle("Control de Acceso Unificado CRM")[0].minimize()
+            pyautogui.getWindowsWithTitle("Control de Acceso Unificado CRM")[0].maximize()
+            crmAttempts = 0
+        crmAttempts = crmAttempts + 1
+
+    print("CRM dashboard login is present!")    
 # Connect CRM Onyx App    
 def connectToCRM():    
     crm_select_app = None
